@@ -1,0 +1,344 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout>
+  <!-- Hero Section -->
+  <header id="inicio" class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+    <!-- Background effects -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-[10%] -right-[5%] w-[60%] h-[60%] bg-accent/10 dark:bg-accent/5 blur-[100px] rounded-full animate-blob"></div>
+      <div class="absolute top-[20%] -left-[10%] w-[50%] h-[50%] bg-secondary/10 dark:bg-secondary/5 blur-[80px] rounded-full animate-blob animation-delay-2000"></div>
+      <div class="absolute bottom-[10%] left-[20%] w-[30%] h-[30%] bg-primary/5 dark:bg-primary/10 blur-[60px] rounded-full animate-blob animation-delay-4000"></div>
+      <svg class="absolute top-0 right-0 w-full h-full opacity-20 dark:opacity-10 z-0" preserveAspectRatio="none" viewBox="0 0 100 100">
+        <path class="text-secondary" d="M0 0 C 30 20 70 20 100 0 L 100 100 L 0 100" fill="none" stroke="currentColor" stroke-width="0.2"></path>
+        <path class="text-accent" d="M0 40 C 30 60 70 30 100 60" fill="none" stroke="currentColor" stroke-width="0.1"></path>
+      </svg>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Text Content -->
+        <div class="order-2 lg:order-1 text-center lg:text-left space-y-8">
+          <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-surface-light border border-secondary/20 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            <span class="text-primary dark:text-primary text-xs font-bold tracking-[0.2em] uppercase">Nuevo Lanzamiento</span>
+          </div>
+          
+          <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.1]">
+            <span class="text-gradient block mb-1">Una Voz</span>
+            <span class="text-gray-800 dark:text-gray-200 font-light text-4xl md:text-6xl lg:text-7xl block mt-2">al paso del Eclipse</span>
+          </h1>
+          
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-lg mx-auto lg:mx-0 font-light leading-relaxed tracking-wide">
+            Un viaje de sanación intuitiva. Descubre la luz que emerge cuando las sombras se transforman en sabiduría.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start pt-6">
+            <a href="#libro" class="group relative overflow-hidden bg-primary text-white px-10 py-4 rounded-full font-display transition-all transform hover:-translate-y-1 shadow-lg shadow-primary/30 hover:shadow-primary/50">
+              <span class="relative z-10 flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-lg">auto_stories</span>
+                PRE-ORDENAR LIBRO
+              </span>
+              <div class="absolute inset-0 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out"></div>
+            </a>
+            <a href="#servicios" class="px-10 py-4 rounded-full font-display border border-primary/30 dark:border-accent/30 text-primary dark:text-accent hover:bg-surface-light dark:hover:bg-surface-dark transition-all flex items-center justify-center group">
+              VER SERVICIOS
+              <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Image -->
+        <div class="order-1 lg:order-2 relative flex justify-center">
+          <div class="relative w-72 h-80 md:w-[26rem] md:h-[30rem] lg:w-[28rem] lg:h-[34rem] animate-float">
+            <div class="absolute inset-0 bg-secondary/30 blur-3xl rounded-[40%] animate-pulse"></div>
+            <div class="absolute -inset-4 bg-gradient-to-tr from-accent/20 to-secondary/20 blur-2xl rounded-blob animate-blob"></div>
+            <div class="relative w-full h-full organic-border overflow-hidden shadow-2xl border-[6px] border-white/80 dark:border-white/10 ring-1 ring-secondary/20">
+              <img 
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=1000&fit=crop&crop=face" 
+                alt="Adriana Cristina Rueda Portrait" 
+                class="w-full h-full object-cover scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent mix-blend-overlay"></div>
+              <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary/20 to-transparent opacity-60"></div>
+            </div>
+            <!-- Badge -->
+            <div class="absolute -bottom-6 -right-6 md:bottom-8 md:-right-8 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-sm p-5 rounded-2xl shadow-xl border border-white/50 dark:border-gray-700 max-w-[200px] z-20 animate-float" style="animation-delay: 1s;">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="material-symbols-outlined text-secondary text-sm">verified</span>
+                <p class="font-display font-bold text-primary dark:text-accent text-lg">AdriCris Rueda</p>
+              </div>
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-light tracking-wide uppercase">Terapeuta Holística & Autora</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <a href="#libro" class="flex flex-col items-center text-primary dark:text-accent/70 hover:text-secondary transition-colors group">
+        <span class="text-[0.6rem] uppercase tracking-widest mb-2 opacity-0 group-hover:opacity-100 transition-opacity">Descubre Más</span>
+        <span class="material-symbols-outlined text-3xl animate-bounce">keyboard_arrow_down</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Book Section -->
+  <section id="libro" class="py-32 bg-surface-light dark:bg-surface-dark transition-colors duration-300 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-20">
+        <!-- Book Image -->
+        <div class="w-full lg:w-1/2 flex justify-center">
+          <div class="relative group cursor-pointer perspective-1000">
+            <div class="absolute inset-0 bg-secondary/40 blur-3xl rounded-full scale-110 group-hover:scale-125 transition-transform duration-700 opacity-60 animate-pulse"></div>
+            <div class="relative transform transition-transform duration-500 group-hover:rotate-y-6 group-hover:scale-105 z-10">
+              <img 
+                src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&h=900&fit=crop" 
+                alt="Portada del libro Una Voz al paso del Eclipse" 
+                class="relative w-[320px] md:w-[420px] shadow-[0_20px_50px_rgba(0,0,0,0.3)] rounded-r-xl rounded-l-md border-l-2 border-white/20"
+              />
+              <div class="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 rounded-r-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Book Content -->
+        <div class="w-full lg:w-1/2 space-y-10">
+          <div>
+            <span class="text-secondary text-sm font-bold tracking-[0.2em] uppercase mb-2 block">Obra Destacada</span>
+            <h2 class="font-display text-5xl md:text-6xl text-gray-900 dark:text-white leading-tight">
+              Una Voz al paso del <span class="text-secondary italic font-normal relative">Eclipse
+                <svg class="absolute w-full h-3 -bottom-1 left-0 text-secondary/30" preserveAspectRatio="none" viewBox="0 0 100 10">
+                  <path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" stroke-width="2"></path>
+                </svg>
+              </span>
+            </h2>
+          </div>
+          
+          <div class="prose dark:prose-invert text-gray-600 dark:text-gray-300 font-light">
+            <p class="text-lg leading-relaxed">
+              <span class="text-4xl float-left mr-2 font-display text-primary dark:text-accent leading-none">E</span>
+              n las páginas de este libro, encontrarás un refugio para el alma. Una experiencia transformadora que te invita a abrazar tus sombras para descubrir tu luz interior con suavidad y compasión.
+            </p>
+            <p class="text-lg leading-relaxed">
+              A través de relatos íntimos y guías de sanación intuitiva canalizada, Adriana te acompaña en el proceso de redescubrirte y despertar a una vida consciente.
+            </p>
+          </div>
+          
+          <div class="space-y-6 bg-white/50 dark:bg-background-dark/50 p-8 rounded-2xl border border-white/60 dark:border-white/5 backdrop-blur-sm">
+            <div class="flex items-center gap-4 group">
+              <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-xl">auto_awesome</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-200 text-sm md:text-base">Prácticas de auto-sanación emocional canalizada.</p>
+            </div>
+            <div class="flex items-center gap-4 group">
+              <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-xl">favorite</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-200 text-sm md:text-base">Herramientas para conectar con tu esencia y propósito.</p>
+            </div>
+            <div class="flex items-center gap-4 group">
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary dark:text-accent group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-xl">all_inclusive</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-200 text-sm md:text-base">Activaciones cuánticas para el crecimiento espiritual.</p>
+            </div>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row gap-4 items-center">
+            <button class="gold-gradient text-primary px-8 py-4 rounded-full font-display font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-3 tracking-wide">
+              COMPRAR AHORA
+              <span class="material-symbols-outlined text-xl">shopping_bag</span>
+            </button>
+            <p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">
+              Disponible en Digital & Audiolibro
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="sobre-mi" class="py-24 bg-background-light dark:bg-background-dark relative overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-surface-light dark:from-surface-dark to-transparent opacity-50"></div>
+    </div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16">
+        <span class="text-secondary font-bold tracking-[0.3em] uppercase text-xs block mb-4">La Guía</span>
+        <h2 class="font-display text-4xl md:text-5xl text-gray-900 dark:text-white mb-2">Adriana Cristina Rueda Sañudo</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mt-4"></div>
+      </div>
+      
+      <div class="relative bg-white dark:bg-surface-dark rounded-[3rem] p-8 md:p-14 shadow-2xl border border-gray-100 dark:border-gray-800">
+        <div class="absolute -top-10 -left-10 w-32 h-32 bg-secondary/20 rounded-full blur-2xl"></div>
+        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-accent/20 rounded-full blur-2xl"></div>
+        
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+          <!-- Profile Image -->
+          <div class="w-40 h-40 md:w-56 md:h-56 flex-shrink-0 relative group">
+            <div class="absolute inset-0 rounded-full border-2 border-dashed border-secondary/50 animate-[spin_12s_linear_infinite]"></div>
+            <div class="absolute inset-2 rounded-full border border-primary/20 animate-[spin_15s_linear_infinite_reverse]"></div>
+            <div class="absolute inset-0 rounded-full bg-secondary/20 blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face" 
+              alt="Adriana Cristina Rueda" 
+              class="w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-700 relative z-10 shadow-lg"
+            />
+          </div>
+          
+          <!-- Bio Text -->
+          <div class="text-gray-600 dark:text-gray-300 text-justify relative z-10 font-light">
+            <span class="material-symbols-outlined absolute -top-8 -left-4 text-6xl text-gray-100 dark:text-gray-800 -z-10 rotate-180">format_quote</span>
+            <p class="mb-6 leading-relaxed">
+              Arquitecta y Profesional en Tecnologías de Información convertida en guía espiritual. Como <strong class="text-primary dark:text-accent font-medium">Reikista, pinealista y canalizadora</strong>, facilito talleres y cursos para el crecimiento del ser.
+            </p>
+            <p class="mb-6 leading-relaxed">
+              Como Terapeuta holística, hago uso de <em class="text-gray-800 dark:text-gray-200 font-medium">"terapias de sanación intuitiva canalizada"</em> donde combino los principios del reiki, símbolos de luz, mensajes canalizados, cristaloterapia y activaciones cuánticas.
+            </p>
+            <p class="leading-relaxed">
+              Soy co-creadora del método de auto-sanación emocional canalizado <strong class="text-secondary font-display text-lg">"SWAMI OM HARI"</strong> y guía de la comunidad de apoyo espiritual <em class="text-gray-800 dark:text-gray-200">"Confío y Creo en Mí"</em>.
+            </p>
+            <div class="mt-8 flex justify-end">
+              <span class="font-display italic text-accent">Bogotá, Colombia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="servicios" class="py-24 bg-surface-light dark:bg-surface-dark transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div class="max-w-2xl">
+          <h2 class="font-display text-4xl md:text-5xl text-gray-900 dark:text-white mb-6">Servicios Holísticos</h2>
+          <p class="text-gray-600 dark:text-gray-400 text-lg font-light border-l-4 border-secondary pl-4">
+            Espacios sagrados diseñados para tu evolución, sanación y despertar de conciencia.
+          </p>
+        </div>
+        <button class="hidden md:inline-flex items-center gap-2 text-primary dark:text-secondary font-bold hover:gap-4 transition-all">
+          VER TODO EL CATÁLOGO <span class="material-symbols-outlined">arrow_right_alt</span>
+        </button>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="group bg-background-light dark:bg-background-dark rounded-[2rem] p-10 hover:shadow-2xl transition-all duration-500 relative overflow-hidden border border-transparent hover:border-accent/20">
+          <div class="absolute -right-10 -top-10 w-40 h-40 bg-accent/10 rounded-full blur-2xl group-hover:bg-accent/20 transition-colors"></div>
+          <div class="relative z-10">
+            <div class="w-16 h-16 rounded-2xl bg-white dark:bg-surface-dark shadow-sm flex items-center justify-center mb-8 text-primary dark:text-accent group-hover:scale-110 transition-transform duration-300 rotate-3 group-hover:rotate-0">
+              <span class="material-symbols-outlined text-3xl">spa</span>
+            </div>
+            <h3 class="font-display text-2xl text-gray-900 dark:text-white mb-4">Terapia Holística</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-8 font-light leading-relaxed text-sm">
+              Sesiones personalizadas de sanación intuitiva canalizada, combinando Reiki, cristaloterapia y mensajes de luz para equilibrar tu energía.
+            </p>
+            <a href="#" class="inline-flex items-center text-primary dark:text-secondary font-semibold text-sm tracking-wide uppercase hover:underline decoration-2 underline-offset-4">
+              Más información
+            </a>
+          </div>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="group bg-background-light dark:bg-background-dark rounded-[2rem] p-10 hover:shadow-2xl transition-all duration-500 relative overflow-hidden border border-transparent hover:border-secondary/20">
+          <div class="absolute -right-10 -top-10 w-40 h-40 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-colors"></div>
+          <div class="relative z-10">
+            <div class="w-16 h-16 rounded-2xl bg-white dark:bg-surface-dark shadow-sm flex items-center justify-center mb-8 text-secondary group-hover:scale-110 transition-transform duration-300 -rotate-2 group-hover:rotate-0">
+              <span class="material-symbols-outlined text-3xl">school</span>
+            </div>
+            <h3 class="font-display text-2xl text-gray-900 dark:text-white mb-4">Talleres y Cursos</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-8 font-light leading-relaxed text-sm">
+              Formación en crecimiento espiritual, activación de la glándula pineal y herramientas prácticas para la vida consciente.
+            </p>
+            <a href="#" class="inline-flex items-center text-primary dark:text-secondary font-semibold text-sm tracking-wide uppercase hover:underline decoration-2 underline-offset-4">
+              Ver Calendario
+            </a>
+          </div>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="group bg-background-light dark:bg-background-dark rounded-[2rem] p-10 hover:shadow-2xl transition-all duration-500 relative overflow-hidden border border-transparent hover:border-primary/20">
+          <div class="absolute -right-10 -top-10 w-40 h-40 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors"></div>
+          <div class="relative z-10">
+            <div class="w-16 h-16 rounded-2xl bg-white dark:bg-surface-dark shadow-sm flex items-center justify-center mb-8 text-primary dark:text-accent group-hover:scale-110 transition-transform duration-300 rotate-3 group-hover:rotate-0">
+              <span class="material-symbols-outlined text-3xl">diversity_1</span>
+            </div>
+            <h3 class="font-display text-2xl text-gray-900 dark:text-white mb-4">Comunidad</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-8 font-light leading-relaxed text-sm">
+              Un espacio de apoyo espiritual continuo, meditaciones grupales y acompañamiento en tu proceso de despertar. "Confío y Creo en Mí".
+            </p>
+            <a href="#" class="inline-flex items-center text-primary dark:text-secondary font-semibold text-sm tracking-wide uppercase hover:underline decoration-2 underline-offset-4">
+              Unirse
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-8 text-center md:hidden">
+        <button class="inline-flex items-center gap-2 text-primary dark:text-secondary font-bold hover:gap-4 transition-all">
+          VER TODO EL CATÁLOGO <span class="material-symbols-outlined">arrow_right_alt</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-24 relative overflow-hidden bg-primary dark:bg-background-dark">
+    <svg class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" preserveAspectRatio="none" viewBox="0 0 100 100">
+      <path d="M0 50 Q 25 30 50 50 T 100 50 V 100 H 0 Z" fill="white"></path>
+    </svg>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="material-symbols-outlined text-6xl text-secondary mb-6 block mx-auto animate-bounce">mark_email_unread</span>
+      <h2 class="font-display text-4xl md:text-5xl text-white mb-6 leading-tight">Comienza tu viaje hacia una<br/> <span class="text-secondary italic">Vida Consciente</span></h2>
+      <p class="text-gray-200 font-light text-lg mb-10 max-w-2xl mx-auto">
+        Suscríbete para recibir meditaciones gratuitas, novedades sobre talleres y capítulos exclusivos de mi nuevo libro.
+      </p>
+      <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto relative" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
+        <input 
+          type="email" 
+          placeholder="Tu correo electrónico" 
+          class="w-full px-8 py-4 rounded-full text-gray-900 bg-surface-light focus:ring-2 focus:ring-secondary focus:outline-none border-none shadow-xl font-light placeholder-gray-400"
+          required
+        />
+        <button 
+          type="submit"
+          class="bg-secondary text-primary font-bold px-10 py-4 rounded-full hover:bg-white hover:text-primary transition-colors shadow-lg shadow-secondary/30 whitespace-nowrap tracking-wide"
+        >
+          SUSCRIBIRME
+        </button>
+      </form>
+      <p class="text-xs text-white/40 mt-6 font-light">Respetamos tu privacidad. No spam.</p>
+    </div>
+  </section>
+</Layout>
+
+<!-- Schema.org Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Adriana Cristina Rueda Sañudo",
+  "alternateName": "AdriCris Rueda",
+  "description": "Terapeuta Holística, Autora y Guía Espiritual. Creadora del método SWAMI OM HARI y autora de 'Una Voz al paso del Eclipse'.",
+  "url": "https://adricrisrueda.com",
+  "jobTitle": "Terapeuta Holística",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Vida Consciente"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bogotá",
+    "addressCountry": "CO"
+  },
+  "sameAs": []
+}
+</script>

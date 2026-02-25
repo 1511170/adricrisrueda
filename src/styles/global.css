@@ -1,0 +1,76 @@
+/* Import Fonts - MUST be first */
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-body antialiased;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #0F5257, #4F8F8B);
+  }
+  
+  .dark .text-gradient {
+    background-image: linear-gradient(to right, #4F8F8B, #E3B64C);
+  }
+  
+  .gold-gradient {
+    background: linear-gradient(135deg, #E3B64C 0%, #F5D78E 50%, #C49426 100%);
+  }
+  
+  .gold-glow {
+    box-shadow: 0 0 60px -15px rgba(227, 182, 76, 0.5);
+  }
+  
+  .organic-border {
+    border-radius: 56% 44% 71% 29% / 55% 58% 42% 45%;
+  }
+  
+  .organic-border-2 {
+    border-radius: 41% 59% 38% 62% / 55% 35% 65% 45%;
+  }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EDEBE8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4F8F8B;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0F5257;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0D1B1E;
+}
+
+/* Animation Delays */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
