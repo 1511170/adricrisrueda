@@ -1,8 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SchemaOrg from '../components/seo/SchemaOrg.astro';
 ---
 
-<Layout title="Una Voz al Paso del Eclipse | AdriCris Rueda">
+<Layout
+  title="Una Voz al paso del Eclipse | Adriana Cristina Rueda Sañudo"
+  description="Nuevo libro de Adriana Rueda. Un viaje de autoconocimiento a través de la historia de Natalia. Reflexión sobre reconocimiento, lealtad y renacimiento. Feria del Libro de Bogotá, Abril 2026."
+  image="/images/portada-libro-2.png"
+  keywords={['Una Voz al paso del Eclipse', 'libro Adriana Rueda', 'Feria del Libro Bogotá 2026', 'autora colombiana', 'crecimiento espiritual', 'novela espiritual']}
+>
+  <SchemaOrg
+    slot="head"
+    type={['Book']}
+    data={{
+      name: 'Una Voz al paso del Eclipse',
+      genre: 'Crecimiento Espiritual',
+      description: 'Un viaje de autoconocimiento a través de la historia de Natalia. Reflexión sobre reconocimiento, lealtad a una misma y renacimiento.',
+      datePublished: '2026-04-11',
+      image: '/images/portada-libro-2.png',
+      url: 'https://adricrisrueda.com/libro',
+    }}
+  />
+  <SchemaOrg
+    slot="head"
+    type={['BreadcrumbList']}
+    breadcrumbs={[
+      { name: 'Inicio', url: '/' },
+      { name: 'Biblioteca', url: '/libros' },
+      { name: 'Una Voz al paso del Eclipse', url: '/libro' },
+    ]}
+  />
   <!-- Hero Section -->
   <header class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden" id="inicio">
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
@@ -15,10 +42,13 @@ import Layout from '../layouts/Layout.astro';
         <div class="order-1 flex justify-center perspective-1000 relative">
           <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-secondary/20 to-accent/20 rounded-full blur-3xl -z-10 opacity-60"></div>
           <div class="relative w-[280px] md:w-[380px] lg:w-[420px] animate-float">
-            <img 
-              alt="Portada Libro Una Voz al Paso del Eclipse" 
-              class="w-full h-auto drop-shadow-2xl shadow-secondary/20 rounded-r-xl rounded-l-sm transform rotate-y-12 hover:rotate-y-0 transition-transform duration-700 ease-out cursor-pointer" 
-              src="/images/portada-libro-2.png" 
+            <img
+              alt="Portada del libro Una Voz al paso del Eclipse — historia de autoconocimiento y renacimiento por Adriana Cristina Rueda Sañudo, presentado en la Feria del Libro de Bogotá 2026"
+              class="w-full h-auto drop-shadow-2xl shadow-secondary/20 rounded-r-xl rounded-l-sm transform rotate-y-12 hover:rotate-y-0 transition-transform duration-700 ease-out cursor-pointer"
+              src="/images/portada-libro-2.png"
+              loading="eager"
+              fetchpriority="high"
+              decoding="sync"
             />
             <div class="absolute -bottom-8 left-0 right-0 h-8 bg-gradient-to-b from-black/10 to-transparent blur-md rounded-[50%] transform scale-x-90"></div>
           </div>
@@ -151,10 +181,12 @@ import Layout from '../layouts/Layout.astro';
         <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-accent to-secondary"></div>
         <div class="grid grid-cols-1 lg:grid-cols-12">
           <div class="lg:col-span-5 relative min-h-[400px] lg:min-h-full">
-            <img 
-              alt="Adriana Cristina Rueda" 
-              class="absolute inset-0 w-full h-full object-cover" 
-              src="/images/adriana-bio.png" 
+            <img
+              alt="Adriana Cristina Rueda Sañudo, autora de Una Voz al paso del Eclipse — Terapeuta Holística y Guía Espiritual"
+              class="absolute inset-0 w-full h-full object-cover"
+              src="/images/adriana-bio.png"
+              loading="lazy"
+              decoding="async"
             />
             <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
             <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent w-full">

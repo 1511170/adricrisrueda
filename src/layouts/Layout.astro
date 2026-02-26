@@ -1,39 +1,76 @@
 ---
 import '../styles/global.css';
+import SEOHead from '../components/seo/SEOHead.astro';
+import SchemaOrg from '../components/seo/SchemaOrg.astro';
 
 interface Props {
   title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  keywords?: string[];
+  noindex?: boolean;
 }
 
-const { 
-  title = 'AdriCris Rueda | Vida Consciente & Una Voz al Paso del Eclipse'
+const {
+  title       = 'AdriCris Rueda | Vida Consciente & Una Voz al Paso del Eclipse',
+  description = 'Adriana Cristina Rueda Sañudo — Terapeuta Holística, Autora y Guía Espiritual. Descubre "Una Voz al paso del Eclipse" y los servicios de sanación. Bogotá, Colombia.',
+  image       = '/images/logo-oficial.png',
+  type        = 'website',
+  keywords    = [],
+  noindex     = false,
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
+
+const isActive = (path: string) => {
+  if (path === '/') return currentPath === '/';
+  return currentPath.startsWith(path);
+};
 ---
 
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J08BEBZW01"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-J08BEBZW01');
+    </script>
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="AdriCris Rueda - Terapeuta Holística, Autora y Guía Espiritual. Descubre 'Lazos Escritos' y 'Una Voz al paso del Eclipse'." />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    
+    <meta name="theme-color" content="#E3B64C" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    
-    <!-- Google Fonts -->
+
+    <!-- Preconnect fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- SEO + AEO (meta tags, Open Graph, Twitter Cards, AI Citations) -->
+    <SEOHead {title} {description} {image} {type} {keywords} {noindex} />
+
+    <!-- Schema.org base: Organization + WebSite + Person (en todas las páginas) -->
+    <SchemaOrg type={['Organization', 'WebSite', 'Person']} />
+
+    <!-- Slot para schemas adicionales por página -->
+    <slot name="head" />
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    
+
     <!-- Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
-    
-    <!-- Slot para head adicional -->
-    <slot name="head" />
   </head>
   <body class="font-body bg-background-light dark:bg-background-dark text-gray-700 dark:text-gray-200 transition-colors duration-300 antialiased selection:bg-secondary selection:text-white">
     
@@ -44,20 +81,20 @@ const currentPath = Astro.url.pathname;
           <!-- Logo -->
           <div class="flex-shrink-0 flex items-center">
             <a href="/" class="flex items-center gap-3">
-              <img src="/images/logo-sin-fondo.png" alt="AdriCris Rueda" class="h-16 w-auto" />
+              <img src="/images/logo-sin-fondo.png" alt="Logo AdriCris Rueda — Terapeuta Holística y Autora" class="h-16 w-auto" loading="eager" fetchpriority="high" decoding="sync" />
             </a>
           </div>
           
           <!-- Desktop Nav -->
           <div class="hidden md:flex space-x-10 items-center">
-            <a href="/" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5">INICIO</a>
-            <a href="/sobre-mi" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5">SOBRE MÍ</a>
-            <a href="/libros" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5">BIBLIOTECA</a>
-            <a href="/libro" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5 flex items-center gap-1">
+            <a href="/" class={`text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5 ${isActive('/') ? 'border-b-2 border-secondary text-primary dark:text-secondary' : ''}`}>INICIO</a>
+            <a href="/sobre-mi" class={`text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5 ${isActive('/sobre-mi') ? 'border-b-2 border-secondary text-primary dark:text-secondary' : ''}`}>SOBRE MÍ</a>
+            <a href="/libros" class={`text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5 ${isActive('/libros') ? 'border-b-2 border-secondary text-primary dark:text-secondary' : ''}`}>BIBLIOTECA</a>
+            <a href="/libro" class={`text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5 flex items-center gap-1 ${isActive('/libro') ? 'border-b-2 border-secondary text-primary dark:text-secondary' : ''}`}>
               LIBRO
               <span class="px-2 py-0.5 bg-secondary text-primary text-[10px] font-bold uppercase tracking-wider rounded-full">Nuevo</span>
             </a>
-            <a href="/servicios" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5">SERVICIOS</a>
+            <a href="/servicios" class={`text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5 ${isActive('/servicios') ? 'border-b-2 border-secondary text-primary dark:text-secondary' : ''}`}>SERVICIOS</a>
             <a href="https://wa.me/573132979675?text=Hola%2C%20me%20interesa%20agendar%20una%20consulta" target="_blank" rel="noopener noreferrer" class="gold-gradient hover:opacity-90 text-primary px-6 py-2.5 rounded-full font-display font-bold shadow-lg shadow-secondary/20 hover:shadow-secondary/40 transition-all transform hover:-translate-y-0.5 tracking-wide text-sm">
               AGENDAR CONSULTA
             </a>
@@ -106,20 +143,31 @@ const currentPath = Astro.url.pathname;
           <!-- Brand -->
           <div class="lg:col-span-4">
             <div class="flex items-center gap-3 mb-6">
-              <img src="/images/logo-sin-fondo.png" alt="AdriCris Rueda" class="h-12 w-auto" />
+              <img src="/images/logo-sin-fondo.png" alt="Logo AdriCris Rueda" class="h-12 w-auto" loading="lazy" decoding="async" />
             </div>
             <p class="text-gray-400 text-sm font-light leading-relaxed mb-8 max-w-sm">
               Acompañándote en el camino de regreso a ti mismo a través de la terapia holística, la sanación intuitiva y el amor consciente.
             </p>
             <div class="flex space-x-4">
-              <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-secondary hover:bg-white/10 transition-all">
-                <span class="font-bold text-xs">FB</span>
+              <a href="https://www.facebook.com/adricrisespiritual/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-secondary hover:bg-white/10 transition-all" aria-label="Facebook">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                </svg>
               </a>
-              <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-secondary hover:bg-white/10 transition-all">
-                <span class="font-bold text-xs">IG</span>
+              <a href="https://www.instagram.com/adricrisrueda/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-secondary hover:bg-white/10 transition-all" aria-label="Instagram">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.53c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                </svg>
               </a>
-              <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-secondary hover:bg-white/10 transition-all">
-                <span class="font-bold text-xs">YT</span>
+              <a href="https://www.youtube.com/@adricrisespiritual" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-secondary hover:bg-white/10 transition-all" aria-label="YouTube">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="https://co.linkedin.com/in/adriana-cristina-rueda" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-secondary hover:bg-white/10 transition-all" aria-label="LinkedIn">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" clip-rule="evenodd" />
+                </svg>
               </a>
             </div>
           </div>
@@ -185,20 +233,6 @@ const currentPath = Astro.url.pathname;
 
     <!-- Scripts -->
     <script>
-      // Dark mode toggle
-      const themeToggles = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
-      themeToggles.forEach(toggle => {
-        toggle?.addEventListener('click', () => {
-          document.documentElement.classList.toggle('dark');
-          localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-        });
-      });
-      
-      // Check for saved theme preference
-      if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      }
-      
       // Mobile menu toggle
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');

@@ -1,8 +1,58 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SchemaOrg from '../components/seo/SchemaOrg.astro';
 ---
 
-<Layout title="AdriCris Rueda | Servicios Holísticos">
+<Layout
+  title="Servicios Holísticos | Terapia, Talleres y Comunidad — AdriCris Rueda"
+  description="Terapia de Sanación Intuitiva, Reiki, Activación Pineal, Método Swami Om Hari y Escritura Terapéutica. Únete a la comunidad 'Confío y Creo en Mí'. Bogotá, Colombia."
+  keywords={['terapia holística Bogotá', 'Reiki Usui Colombia', 'activación pineal', 'Método Swami Om Hari', 'escritura terapéutica', 'sanación energética']}
+>
+  <SchemaOrg
+    slot="head"
+    type={['Service', 'LocalBusiness']}
+    data={{
+      name: 'Terapia de Sanación Intuitiva — AdriCris Rueda',
+      description: 'Servicios de sanación holística: Reiki Usui, Activación Pineal, Cristales y Escritura Terapéutica. Consultas presenciales y virtuales desde Bogotá.',
+      serviceType: 'Holistic Therapy',
+      areaServed: 'Bogotá, Colombia',
+      url: 'https://adricrisrueda.com/servicios',
+    }}
+  />
+  <SchemaOrg
+    slot="head"
+    type={['BreadcrumbList']}
+    breadcrumbs={[
+      { name: 'Inicio', url: '/' },
+      { name: 'Servicios', url: '/servicios' },
+    ]}
+  />
+  <SchemaOrg
+    slot="head"
+    type={['FAQPage']}
+    faqs={[
+      {
+        q: '¿Qué es la Terapia de Sanación Intuitiva?',
+        a: 'Es una terapia holística que combina Reiki Usui, cristales y activación de la glándula pineal para restaurar el equilibrio energético y emocional del paciente.',
+      },
+      {
+        q: '¿Qué es el Método Swami Om Hari?',
+        a: 'Es un método de autosanación emocional creado para trabajar heridas internas desde el amor propio, facilitando la liberación de patrones que limitan el bienestar.',
+      },
+      {
+        q: '¿Las sesiones son presenciales o virtuales?',
+        a: 'Adriana ofrece sesiones tanto presenciales en Bogotá, Colombia, como virtuales para personas en cualquier parte del mundo.',
+      },
+      {
+        q: '¿Cómo puedo agendar una consulta?',
+        a: 'Puedes agendar tu consulta directamente a través de WhatsApp o enviando un mensaje a adriana@adricrisrueda.com.',
+      },
+      {
+        q: '¿Qué es la Activación Pineal?',
+        a: 'Es un proceso de expansión de conciencia que trabaja sobre la glándula pineal para potenciar la intuición, la creatividad y la conexión espiritual.',
+      },
+    ]}
+  />
   <!-- Hero Section -->
   <header class="relative min-h-[60vh] flex items-center justify-center pt-24 overflow-hidden">
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
@@ -29,10 +79,13 @@ import Layout from '../layouts/Layout.astro';
       <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         <div class="w-full lg:w-1/2 relative">
           <div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
-            <img 
-              alt="Manos canalizando energía de luz" 
-              class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 
-              src="/images/adriana-servicios.png" 
+            <img
+              alt="Adriana Cristina Rueda Sañudo en sesión de terapia holística y Reiki, Bogotá Colombia"
+              class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+              src="/images/adriana-servicios.png"
+              loading="eager"
+              fetchpriority="high"
+              decoding="sync"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent mix-blend-multiply"></div>
           </div>
