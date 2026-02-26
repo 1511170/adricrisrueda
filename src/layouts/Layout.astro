@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title?: string;
 }
@@ -15,7 +17,7 @@ const currentPath = Astro.url.pathname;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="AdriCris Rueda - Terapeuta Holística, Autora y Guía Espiritual. Descubre 'Una Voz al paso del Eclipse' y comienza tu viaje hacia una Vida Consciente." />
+    <meta name="description" content="AdriCris Rueda - Terapeuta Holística, Autora y Guía Espiritual. Descubre 'Lazos Escritos' y 'Una Voz al paso del Eclipse'." />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     
@@ -41,21 +43,21 @@ const currentPath = Astro.url.pathname;
         <div class="flex justify-between items-center h-24">
           <!-- Logo -->
           <div class="flex-shrink-0 flex items-center">
-            <div class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-secondary text-4xl animate-pulse">all_inclusive</span>
-              <div class="flex flex-col">
-                <span class="font-display font-medium text-2xl text-primary dark:text-accent tracking-wide">AdriCris Rueda</span>
-                <span class="text-[0.65rem] uppercase tracking-[0.3em] text-accent/80 dark:text-gray-400 font-medium">Vida Consciente</span>
-              </div>
-            </div>
+            <a href="#inicio" class="flex items-center gap-3">
+              <img src="/images/logo-sin-fondo.png" alt="AdriCris Rueda" class="h-16 w-auto" />
+            </a>
           </div>
           
           <!-- Desktop Nav -->
           <div class="hidden md:flex space-x-10 items-center">
-            <a href="#inicio" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5">INICIO</a>
-            <a href="#libro" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5">LIBRO</a>
-            <a href="#servicios" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5">SERVICIOS</a>
-            <a href="#sobre-mi" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5">SOBRE MÍ</a>
+            <a href="/" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5">INICIO</a>
+            <a href="/sobre-mi" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5">SOBRE MÍ</a>
+            <a href="/libros" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5">BIBLIOTECA</a>
+            <a href="/libro" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5 flex items-center gap-1">
+              LIBRO
+              <span class="px-2 py-0.5 bg-secondary text-primary text-[10px] font-bold uppercase tracking-wider rounded-full">Nuevo</span>
+            </a>
+            <a href="/servicios" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium tracking-wide text-sm transition-all hover:-translate-y-0.5">SERVICIOS</a>
             <button class="gold-gradient hover:opacity-90 text-primary px-6 py-2.5 rounded-full font-display font-bold shadow-lg shadow-secondary/20 hover:shadow-secondary/40 transition-all transform hover:-translate-y-0.5 tracking-wide text-sm">
               AGENDAR CONSULTA
             </button>
@@ -79,10 +81,14 @@ const currentPath = Astro.url.pathname;
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="hidden md:hidden bg-background-light dark:bg-background-dark border-t border-secondary/10 dark:border-gray-800">
         <div class="px-4 py-4 space-y-3">
-          <a href="#inicio" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium">INICIO</a>
-          <a href="#libro" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium">LIBRO</a>
-          <a href="#servicios" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium">SERVICIOS</a>
-          <a href="#sobre-mi" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium">SOBRE MÍ</a>
+          <a href="/" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium">INICIO</a>
+          <a href="/sobre-mi" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium">SOBRE MÍ</a>
+          <a href="/libros" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium">BIBLIOTECA</a>
+          <a href="/libro" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium flex items-center gap-2">
+            LIBRO
+            <span class="px-2 py-0.5 bg-secondary text-primary text-[10px] font-bold uppercase tracking-wider rounded-full">Nuevo</span>
+          </a>
+          <a href="/servicios" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary font-medium">SERVICIOS</a>
           <button class="w-full gold-gradient text-primary px-6 py-3 rounded-full font-display font-bold shadow-lg mt-4">
             AGENDAR CONSULTA
           </button>
@@ -100,8 +106,7 @@ const currentPath = Astro.url.pathname;
           <!-- Brand -->
           <div class="lg:col-span-4">
             <div class="flex items-center gap-3 mb-6">
-              <span class="material-symbols-outlined text-secondary text-3xl">all_inclusive</span>
-              <span class="font-display text-2xl tracking-wide text-white">AdriCris Rueda</span>
+              <img src="/images/logo-sin-fondo.png" alt="AdriCris Rueda" class="h-12 w-auto" />
             </div>
             <p class="text-gray-400 text-sm font-light leading-relaxed mb-8 max-w-sm">
               Acompañándote en el camino de regreso a ti mismo a través de la terapia holística, la sanación intuitiva y el amor consciente.
@@ -123,10 +128,10 @@ const currentPath = Astro.url.pathname;
           <div class="lg:col-span-2 lg:col-start-6">
             <h4 class="font-display font-bold text-lg mb-6 text-secondary tracking-wide">Explorar</h4>
             <ul class="space-y-4 text-sm text-gray-400 font-light">
-              <li><a href="#inicio" class="hover:text-white hover:translate-x-1 inline-block transition-all">Inicio</a></li>
-              <li><a href="#libro" class="hover:text-white hover:translate-x-1 inline-block transition-all">Libro "Una Voz..."</a></li>
-              <li><a href="#servicios" class="hover:text-white hover:translate-x-1 inline-block transition-all">Servicios</a></li>
-              <li><a href="#sobre-mi" class="hover:text-white hover:translate-x-1 inline-block transition-all">Sobre Mí</a></li>
+              <li><a href="/" class="hover:text-white hover:translate-x-1 inline-block transition-all">Inicio</a></li>
+              <li><a href="/sobre-mi" class="hover:text-white hover:translate-x-1 inline-block transition-all">Sobre Mí</a></li>
+              <li><a href="#libro" class="hover:text-white hover:translate-x-1 inline-block transition-all">Mis Libros</a></li>
+              <li><a href="/servicios" class="hover:text-white hover:translate-x-1 inline-block transition-all">Servicios</a></li>
             </ul>
           </div>
           
@@ -136,7 +141,7 @@ const currentPath = Astro.url.pathname;
             <ul class="space-y-4 text-sm text-gray-400 font-light">
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-secondary text-base mt-0.5">mail</span>
-                <span class="hover:text-white transition-colors cursor-pointer">contacto@adricrisrueda.com</span>
+                <span class="hover:text-white transition-colors cursor-pointer">adriana@adricrisrueda.com</span>
               </li>
               <li class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-secondary text-base mt-0.5">location_on</span>

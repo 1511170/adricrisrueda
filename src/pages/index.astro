@@ -32,46 +32,46 @@ import '../styles/global.css';
           </h1>
           
           <p class="text-lg text-gray-600 dark:text-gray-300 max-w-lg mx-auto lg:mx-0 font-light leading-relaxed tracking-wide">
-            Un viaje de sanación intuitiva. Descubre la luz que emerge cuando las sombras se transforman en sabiduría.
+            Una historia que invita a mirarte con honestidad, recordar quién fuiste y dejar la puerta abierta hacia una vida más auténtica.
           </p>
           
           <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start pt-6">
-            <a href="#libro" class="group relative overflow-hidden bg-primary text-white px-10 py-4 rounded-full font-display transition-all transform hover:-translate-y-1 shadow-lg shadow-primary/30 hover:shadow-primary/50">
+            <a href="/libro" class="group relative overflow-hidden bg-accent text-white px-10 py-4 rounded-full font-display transition-all transform hover:-translate-y-1 shadow-lg shadow-accent/30 hover:shadow-accent/50">
               <span class="relative z-10 flex items-center justify-center gap-2">
                 <span class="material-symbols-outlined text-lg">auto_stories</span>
                 PRE-ORDENAR LIBRO
               </span>
-              <div class="absolute inset-0 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out"></div>
             </a>
-            <a href="#servicios" class="px-10 py-4 rounded-full font-display border border-primary/30 dark:border-accent/30 text-primary dark:text-accent hover:bg-surface-light dark:hover:bg-surface-dark transition-all flex items-center justify-center group">
-              VER SERVICIOS
-              <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <a href="#servicios" class="group relative overflow-hidden bg-secondary text-primary px-10 py-4 rounded-full font-display transition-all transform hover:-translate-y-1 shadow-lg shadow-secondary/30 hover:shadow-secondary/50">
+              <span class="relative z-10 flex items-center justify-center gap-2">
+                VER SERVICIOS
+                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+              </span>
+              <div class="absolute inset-0 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out"></div>
             </a>
           </div>
         </div>
         
         <!-- Image -->
-        <div class="order-1 lg:order-2 relative flex justify-center">
-          <div class="relative w-72 h-80 md:w-[26rem] md:h-[30rem] lg:w-[28rem] lg:h-[34rem] animate-float">
+        <div class="order-1 lg:order-2 relative flex justify-center items-start">
+          <div class="relative w-full h-full max-w-[400px] animate-float" style="perspective: 1000px;">
             <div class="absolute inset-0 bg-secondary/30 blur-3xl rounded-[40%] animate-pulse"></div>
-            <div class="absolute -inset-4 bg-gradient-to-tr from-accent/20 to-secondary/20 blur-2xl rounded-blob animate-blob"></div>
-            <div class="relative w-full h-full organic-border overflow-hidden shadow-2xl border-[6px] border-white/80 dark:border-white/10 ring-1 ring-secondary/20">
+            <!-- Portada -->
+            <div class="relative w-full h-full shadow-[15px_5px_40px_rgba(0,0,0,0.4)] transform rotate-y-2deg">
               <img 
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=1000&fit=crop&crop=face" 
-                alt="Adriana Cristina Rueda Portrait" 
-                class="w-full h-full object-cover scale-110"
+                src="/images/portada-libro-2.png" 
+                alt="Una Voz al paso del Eclipse" 
+                class="w-full h-full object-contain"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent mix-blend-overlay"></div>
-              <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary/20 to-transparent opacity-60"></div>
             </div>
-            <!-- Badge -->
-            <div class="absolute -bottom-6 -right-6 md:bottom-8 md:-right-8 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-sm p-5 rounded-2xl shadow-xl border border-white/50 dark:border-gray-700 max-w-[200px] z-20 animate-float" style="animation-delay: 1s;">
-              <div class="flex items-center gap-2 mb-1">
-                <span class="material-symbols-outlined text-secondary text-sm">verified</span>
-                <p class="font-display font-bold text-primary dark:text-accent text-lg">AdriCris Rueda</p>
-              </div>
-              <p class="text-xs text-gray-500 dark:text-gray-400 font-light tracking-wide uppercase">Terapeuta Holística & Autora</p>
+          </div>
+          <!-- Badge -->
+          <div class="absolute -bottom-4 -right-2 md:bottom-8 md:-right-6 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-sm p-5 rounded-2xl shadow-xl border border-white/50 dark:border-gray-700 max-w-[200px] z-20 animate-float" style="animation-delay: 1s;">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="material-symbols-outlined text-secondary text-sm">verified</span>
+              <p class="font-display font-bold text-primary dark:text-accent text-lg">AdriCris Rueda</p>
             </div>
+            <p class="text-xs text-gray-500 dark:text-gray-400 font-light tracking-wide uppercase">Terapeuta Holística & Autora</p>
           </div>
         </div>
       </div>
@@ -85,84 +85,6 @@ import '../styles/global.css';
       </a>
     </div>
   </header>
-
-  <!-- Book Section -->
-  <section id="libro" class="py-32 bg-surface-light dark:bg-surface-dark transition-colors duration-300 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="flex flex-col lg:flex-row items-center gap-20">
-        <!-- Book Image -->
-        <div class="w-full lg:w-1/2 flex justify-center">
-          <div class="relative group cursor-pointer perspective-1000">
-            <div class="absolute inset-0 bg-secondary/40 blur-3xl rounded-full scale-110 group-hover:scale-125 transition-transform duration-700 opacity-60 animate-pulse"></div>
-            <div class="relative transform transition-transform duration-500 group-hover:rotate-y-6 group-hover:scale-105 z-10">
-              <img 
-                src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&h=900&fit=crop" 
-                alt="Portada del libro Una Voz al paso del Eclipse" 
-                class="relative w-[320px] md:w-[420px] shadow-[0_20px_50px_rgba(0,0,0,0.3)] rounded-r-xl rounded-l-md border-l-2 border-white/20"
-              />
-              <div class="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 rounded-r-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Book Content -->
-        <div class="w-full lg:w-1/2 space-y-10">
-          <div>
-            <span class="text-secondary text-sm font-bold tracking-[0.2em] uppercase mb-2 block">Obra Destacada</span>
-            <h2 class="font-display text-5xl md:text-6xl text-gray-900 dark:text-white leading-tight">
-              Una Voz al paso del <span class="text-secondary italic font-normal relative">Eclipse
-                <svg class="absolute w-full h-3 -bottom-1 left-0 text-secondary/30" preserveAspectRatio="none" viewBox="0 0 100 10">
-                  <path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" stroke-width="2"></path>
-                </svg>
-              </span>
-            </h2>
-          </div>
-          
-          <div class="prose dark:prose-invert text-gray-600 dark:text-gray-300 font-light">
-            <p class="text-lg leading-relaxed">
-              <span class="text-4xl float-left mr-2 font-display text-primary dark:text-accent leading-none">E</span>
-              n las páginas de este libro, encontrarás un refugio para el alma. Una experiencia transformadora que te invita a abrazar tus sombras para descubrir tu luz interior con suavidad y compasión.
-            </p>
-            <p class="text-lg leading-relaxed">
-              A través de relatos íntimos y guías de sanación intuitiva canalizada, Adriana te acompaña en el proceso de redescubrirte y despertar a una vida consciente.
-            </p>
-          </div>
-          
-          <div class="space-y-6 bg-white/50 dark:bg-background-dark/50 p-8 rounded-2xl border border-white/60 dark:border-white/5 backdrop-blur-sm">
-            <div class="flex items-center gap-4 group">
-              <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-xl">auto_awesome</span>
-              </div>
-              <p class="text-gray-700 dark:text-gray-200 text-sm md:text-base">Prácticas de auto-sanación emocional canalizada.</p>
-            </div>
-            <div class="flex items-center gap-4 group">
-              <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-primary transition-colors">
-                <span class="material-symbols-outlined text-xl">favorite</span>
-              </div>
-              <p class="text-gray-700 dark:text-gray-200 text-sm md:text-base">Herramientas para conectar con tu esencia y propósito.</p>
-            </div>
-            <div class="flex items-center gap-4 group">
-              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary dark:text-accent group-hover:bg-primary group-hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-xl">all_inclusive</span>
-              </div>
-              <p class="text-gray-700 dark:text-gray-200 text-sm md:text-base">Activaciones cuánticas para el crecimiento espiritual.</p>
-            </div>
-          </div>
-          
-          <div class="flex flex-col sm:flex-row gap-4 items-center">
-            <button class="gold-gradient text-primary px-8 py-4 rounded-full font-display font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-3 tracking-wide">
-              COMPRAR AHORA
-              <span class="material-symbols-outlined text-xl">shopping_bag</span>
-            </button>
-            <p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">
-              Disponible en Digital & Audiolibro
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- About Section -->
   <section id="sobre-mi" class="py-24 bg-background-light dark:bg-background-dark relative overflow-hidden">
@@ -187,7 +109,7 @@ import '../styles/global.css';
             <div class="absolute inset-2 rounded-full border border-primary/20 animate-[spin_15s_linear_infinite_reverse]"></div>
             <div class="absolute inset-0 rounded-full bg-secondary/20 blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
             <img 
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face" 
+              src="/images/adriana-perfil.png" 
               alt="Adriana Cristina Rueda" 
               class="w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-700 relative z-10 shadow-lg"
             />
@@ -208,6 +130,91 @@ import '../styles/global.css';
             <div class="mt-8 flex justify-end">
               <span class="font-display italic text-accent">Bogotá, Colombia</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Section -->
+  <section id="libro" class="py-32 bg-surface-light dark:bg-surface-dark transition-colors duration-300 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-20">
+        <!-- Book Image -->
+        <div class="w-full lg:w-1/2 flex justify-center">
+          <div class="relative group cursor-pointer perspective-1000" style="perspective: 1000px;">
+            <div class="absolute inset-0 bg-secondary/20 blur-xl rounded-full opacity-40"></div>
+            <!-- Libro -->
+            <div class="relative transform transition-transform duration-500 group-hover:rotate-y-6 group-hover:scale-105 z-10">
+              <div class="flex items-stretch">
+                <!-- Lomo del libro -->
+                <div class="w-2 bg-gradient-to-r from-gray-700 via-gray-500 to-gray-700 shadow-md"></div>
+                <!-- Portada -->
+                <div class="relative shadow-[0_15px_40px_rgba(0,0,0,0.25)]">
+                  <img 
+                    src="/images/lazos-escritos.png" 
+                    alt="Portada del libro Lazos Escritos" 
+                    class="w-[320px] md:w-[420px] h-auto object-contain rounded-sm"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Book Content -->
+        <div class="w-full lg:w-1/2 space-y-10">
+          <div>
+            <span class="text-secondary text-sm font-bold tracking-[0.2em] uppercase mb-2 block">Obra Destacada</span>
+            <h2 class="font-display text-5xl md:text-6xl text-gray-900 dark:text-white leading-tight">
+              Lazos <span class="text-secondary italic font-normal relative">Escritos
+                <svg class="absolute w-full h-3 -bottom-1 left-0 text-secondary/30" preserveAspectRatio="none" viewBox="0 0 100 10">
+                  <path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" stroke-width="2"></path>
+                </svg>
+              </span>
+            </h2>
+          </div>
+          
+          <div class="prose dark:prose-invert text-gray-600 dark:text-gray-300 font-light">
+            <p class="text-lg leading-relaxed">
+              <span class="text-4xl float-left mr-2 font-display text-primary dark:text-accent leading-none">S</span>
+              u primera obra, Lazos Escritos (2023), presenta un transitar donde la conexión espiritual se convierte en una fuente de claridad y serenidad para vivir con mayor conciencia del presente.
+            </p>
+            <p class="text-lg leading-relaxed">
+              Con este libro, su mensaje ha llegado a lectores en diversos países, invitándolos a descubrir su propia voz interior y camino de sanación.
+            </p>
+          </div>
+          
+          <div class="space-y-6 bg-white/50 dark:bg-background-dark/50 p-8 rounded-2xl border border-white/60 dark:border-white/5 backdrop-blur-sm">
+            <div class="flex items-center gap-4 group">
+              <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-xl">auto_awesome</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-200 text-sm md:text-base">Relatos de conexión espiritual y transformación personal.</p>
+            </div>
+            <div class="flex items-center gap-4 group">
+              <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-xl">favorite</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-200 text-sm md:text-base">Guía hacia la serenidad y el consciente del presente.</p>
+            </div>
+            <div class="flex items-center gap-4 group">
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary dark:text-accent group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-xl">all_inclusive</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-200 text-sm md:text-base">Inspiración para lectores de múltiples países.</p>
+            </div>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row gap-4 items-center">
+            <button class="gold-gradient text-primary px-8 py-4 rounded-full font-display font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-3 tracking-wide">
+              COMPRAR AHORA
+              <span class="material-symbols-outlined text-xl">shopping_bag</span>
+            </button>
+            <p class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">
+              Disponible en Digital & Audiolibro
+            </p>
           </div>
         </div>
       </div>
@@ -327,7 +334,7 @@ import '../styles/global.css';
   "@type": "Person",
   "name": "Adriana Cristina Rueda Sañudo",
   "alternateName": "AdriCris Rueda",
-  "description": "Terapeuta Holística, Autora y Guía Espiritual. Creadora del método SWAMI OM HARI y autora de 'Una Voz al paso del Eclipse'.",
+  "description": "Terapeuta Holística, Autora y Guía Espiritual. Creadora del método SWAMI OM HARI y autora de 'Lazos Escritos' y 'Una Voz al paso del Eclipse'.",
   "url": "https://adricrisrueda.com",
   "jobTitle": "Terapeuta Holística",
   "worksFor": {

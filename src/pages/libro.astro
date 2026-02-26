@@ -1,0 +1,216 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Una Voz al Paso del Eclipse | AdriCris Rueda">
+  <!-- Hero Section -->
+  <header class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden" id="inicio">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/5 rounded-full blur-[100px] dark:bg-secondary/5"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-secondary/10 rounded-full opacity-30 animate-[spin_60s_linear_infinite]"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] border border-accent/10 rounded-full opacity-30 animate-[spin_40s_linear_infinite_reverse]"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12 md:py-0">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="order-1 flex justify-center perspective-1000 relative">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-secondary/20 to-accent/20 rounded-full blur-3xl -z-10 opacity-60"></div>
+          <div class="relative w-[280px] md:w-[380px] lg:w-[420px] animate-float">
+            <img 
+              alt="Portada Libro Una Voz al Paso del Eclipse" 
+              class="w-full h-auto drop-shadow-2xl shadow-secondary/20 rounded-r-xl rounded-l-sm transform rotate-y-12 hover:rotate-y-0 transition-transform duration-700 ease-out cursor-pointer" 
+              src="/images/portada-libro-2.png" 
+            />
+            <div class="absolute -bottom-8 left-0 right-0 h-8 bg-gradient-to-b from-black/10 to-transparent blur-md rounded-[50%] transform scale-x-90"></div>
+          </div>
+        </div>
+        <div class="order-2 text-center lg:text-left space-y-8">
+          <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-secondary/20 dark:bg-secondary/30 border border-secondary/30 shadow-sm mx-auto lg:mx-0">
+            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            <span class="text-primary dark:text-secondary text-xs font-bold tracking-[0.2em] uppercase">Lanzamiento: 11 de Abril 2026</span>
+          </div>
+          <h1 class="font-display text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-primary dark:text-white">
+            Una Voz <br/>
+            <span class="italic font-light text-4xl md:text-5xl lg:text-6xl text-gray-600 dark:text-gray-300">al paso del Eclipse</span>
+          </h1>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-lg mx-auto lg:mx-0 font-light leading-relaxed tracking-wide">
+            La conmovedora historia de Natalia y su viaje hacia el reencuentro consigo misma. Una narrativa sobre la valentía de mirarse de frente y renacer desde la propia sombra.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+            <a class="gold-gradient hover:opacity-90 text-primary px-8 py-4 rounded-full font-display font-medium tracking-wide transition-all shadow-lg shadow-secondary/30 hover:shadow-secondary/50 transform hover:-translate-y-1 flex items-center justify-center gap-2" href="#comprar">
+              <span class="material-symbols-outlined">how_to_reg</span>
+              PRE-REGISTRARSE
+            </a>
+            <a class="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-full font-display font-medium tracking-wide transition-all flex items-center justify-center gap-2" href="#comprar">
+              <span class="material-symbols-outlined">notifications</span>
+              RECIBE NOTIFICACIONES
+            </a>
+          </div>
+          <div class="pt-6 flex items-center justify-center lg:justify-start gap-6 opacity-70">
+            <div class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-secondary text-sm">star</span>
+              <span class="material-symbols-outlined text-secondary text-sm">star</span>
+              <span class="material-symbols-outlined text-secondary text-sm">star</span>
+              <span class="material-symbols-outlined text-secondary text-sm">star</span>
+              <span class="material-symbols-outlined text-secondary text-sm">star</span>
+            </div>
+            <span class="text-xs font-medium uppercase tracking-widest text-gray-500 dark:text-gray-400">Próximo Lanzamiento: Abril 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <a class="animate-bounce p-2 rounded-full text-primary/50 dark:text-white/50 hover:text-primary dark:hover:text-white transition-colors" href="#sinopsis">
+        <span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Sinopsis Section -->
+  <section class="py-24 md:py-32 bg-white dark:bg-surface-dark relative overflow-hidden" id="sinopsis">
+    <div class="absolute top-0 right-0 w-1/3 h-full bg-background-light dark:bg-background-dark/30 -skew-x-12 transform origin-top-right z-0"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
+        <div class="lg:w-1/2 space-y-8">
+          <span class="text-secondary font-bold tracking-[0.3em] uppercase text-xs block mb-2">Sinopsis</span>
+          <h2 class="font-display text-4xl md:text-5xl text-primary dark:text-white leading-tight">El Reencuentro de <span class="italic text-accent">Natalia</span></h2>
+          <div class="prose dark:prose-invert text-gray-600 dark:text-gray-300 font-light text-lg leading-relaxed space-y-6">
+            <p>
+              <span class="text-5xl float-left mr-3 mt-[-10px] font-display text-secondary">N</span>atalia camina por la vida con una sensación constante de estar incompleta, como si una parte esencial de su ser se hubiera quedado atrapada en algún lugar del pasado. "Una Voz al Paso del Eclipse" no es solo una historia; es un espejo.
+            </p>
+            <p>
+              A través de sus páginas, acompañamos a la protagonista en un viaje íntimo y revelador. Enfrentada a sus miedos más profundos y a las sombras que ha evitado durante años, Natalia descubre que el eclipse no es el fin de la luz, sino el preludio necesario para un nuevo amanecer.
+            </p>
+            <p>
+              Es una narrativa tejida con vulnerabilidad y fuerza, que nos recuerda que a veces debemos perdernos para poder encontrarnos verdaderamente.
+            </p>
+          </div>
+        </div>
+        <div class="lg:w-1/2 flex flex-col justify-center">
+          <div class="relative p-10 md:p-14 bg-background-light dark:bg-background-dark rounded-tr-[4rem] rounded-bl-[4rem] shadow-xl border border-secondary/10">
+            <span class="material-symbols-outlined absolute top-8 left-8 text-6xl text-secondary/20 font-serif">format_quote</span>
+            <blockquote class="relative z-10 text-center">
+              <p class="font-display text-2xl md:text-3xl italic text-primary dark:text-white leading-relaxed mb-6">
+                "No temas a la oscuridad que te habita, pues es allí, en el silencio profundo de tu propia sombra, donde tu luz espera pacientemente para ser redescubierta."
+              </p>
+              <footer class="text-sm font-medium tracking-widest uppercase text-accent">
+                — Una Voz al Paso del Eclipse
+              </footer>
+            </blockquote>
+            <div class="absolute bottom-4 right-4 w-20 h-20 bg-gradient-to-tr from-accent/20 to-transparent rounded-full blur-xl"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Temáticas Section -->
+  <section class="py-24 bg-surface-light dark:bg-background-dark relative" id="tematicas">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="text-accent font-bold tracking-[0.3em] uppercase text-xs block mb-4">Temáticas Centrales</span>
+        <h2 class="font-display text-4xl md:text-5xl text-primary dark:text-white mb-6">El Acto Más Valiente: <br/><span class="italic text-secondary">Mirarse de Frente</span></h2>
+        <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="group bg-white dark:bg-surface-dark p-10 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-800 flex flex-col items-center text-center">
+          <div class="w-16 h-16 mb-6 rounded-full bg-secondary/10 flex items-center justify-center group-hover:bg-secondary group-hover:text-white text-secondary transition-colors duration-300">
+            <span class="material-symbols-outlined text-3xl">visibility</span>
+          </div>
+          <h3 class="font-display text-2xl text-primary dark:text-white mb-4">Reconocimiento</h3>
+          <p class="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+            Aceptar nuestra historia completa, sin ediciones. El primer paso para sanar es validar cada herida y cada triunfo como parte integral de quiénes somos.
+          </p>
+        </div>
+        <div class="group bg-white dark:bg-surface-dark p-10 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-800 flex flex-col items-center text-center relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
+          <div class="w-16 h-16 mb-6 rounded-full bg-secondary/10 flex items-center justify-center group-hover:bg-secondary group-hover:text-white text-secondary transition-colors duration-300">
+            <span class="material-symbols-outlined text-3xl">favorite</span>
+          </div>
+          <h3 class="font-display text-2xl text-primary dark:text-white mb-4">Lealtad a Una Misma</h3>
+          <p class="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+            Romper con las expectativas ajenas para abrazar la propia verdad. Un compromiso inquebrantable con nuestro bienestar y autenticidad.
+          </p>
+        </div>
+        <div class="group bg-white dark:bg-surface-dark p-10 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-800 flex flex-col items-center text-center">
+          <div class="w-16 h-16 mb-6 rounded-full bg-secondary/10 flex items-center justify-center group-hover:bg-secondary group-hover:text-white text-secondary transition-colors duration-300">
+            <span class="material-symbols-outlined text-3xl">psychology_alt</span>
+          </div>
+          <h3 class="font-display text-2xl text-primary dark:text-white mb-4">Renacimiento</h3>
+          <p class="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+            La transformación que ocurre después del caos. Entender que cada final es un comienzo y que poseemos la fuerza para reinventarnos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Autora Section -->
+  <section class="py-24 bg-background-light dark:bg-background-dark overflow-hidden relative" id="autora">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white dark:bg-surface-dark rounded-[3rem] overflow-hidden shadow-2xl relative">
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-accent to-secondary"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 relative min-h-[400px] lg:min-h-full">
+            <img 
+              alt="Adriana Cristina Rueda" 
+              class="absolute inset-0 w-full h-full object-cover" 
+              src="/images/adriana-bio.png" 
+            />
+            <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+            <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent w-full">
+              <p class="text-white font-display text-2xl">Adriana Cristina Rueda</p>
+              <p class="text-secondary text-sm tracking-wider uppercase">Autora & Terapeuta Holística</p>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-10 md:p-16 lg:p-20 flex flex-col justify-center">
+            <span class="text-accent font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Nota de la Autora</span>
+            <h2 class="font-display text-3xl md:text-4xl text-primary dark:text-white mb-8">La Esencia Terapéutica Detrás de la Historia</h2>
+            <div class="space-y-6 text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+              <p>
+                "Escribir 'Una Voz al Paso del Eclipse' no fue solo un ejercicio literario, sino un acto de canalización. Quise plasmar en la historia de Natalia los procesos que veo a diario en mi consulta y los que he vivido en mi propia piel."
+              </p>
+              <p>
+                "El eclipse es una metáfora poderosa. En la terapia holística, a menudo tememos esos momentos donde la luz parece extinguirse. Pero es en esa penumbra momentánea donde las estrellas se hacen visibles. Este libro es una herramienta para recordarte que tu crecimiento personal no es lineal, y que abrazar tu oscuridad es el acto de amor propio más revolucionario."
+              </p>
+            </div>
+            <div class="mt-10">
+              <span class="font-display italic text-2xl text-secondary">AdriCris</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprar Section -->
+  <section class="py-24 bg-surface-light dark:bg-surface-dark relative" id="comprar">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="material-symbols-outlined text-5xl text-accent mb-6 animate-pulse">event_available</span>
+      <h2 class="font-display text-4xl md:text-5xl text-primary dark:text-white mb-6">Feria del Libro de Bogotá 2026</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto font-light">
+        ¡Sé de los primeros en adquirir "Una Voz al paso del Eclipse"! Regístrate para recibir información exclusiva sobre la preventa y la Firma de Libros en la Feria.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+        <div class="bg-white dark:bg-background-dark p-8 rounded-2xl shadow-lg border border-transparent hover:border-secondary/30 transition-all group">
+          <span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-secondary mb-4 transition-colors">how_to_reg</span>
+          <h3 class="font-display text-xl text-primary dark:text-white mb-2">Pre-Registrarse</h3>
+          <p class="text-sm text-gray-500 mb-6">Reserva tu ejemplar antes del lanzamiento</p>
+          <button class="w-full gold-gradient hover:opacity-90 text-primary py-3 rounded-xl font-medium transition-colors shadow-md hover:shadow-lg flex justify-center items-center gap-2">
+            REGISTRARSE
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </button>
+        </div>
+        <div class="bg-white dark:bg-background-dark p-8 rounded-2xl shadow-lg border border-transparent hover:border-accent/30 transition-all group">
+          <span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-accent mb-4 transition-colors">notifications_active</span>
+          <h3 class="font-display text-xl text-primary dark:text-white mb-2">Notificaciones</h3>
+          <p class="text-sm text-gray-500 mb-6">Recibe alertas sobre el lanzamiento</p>
+          <button class="w-full border-2 border-accent text-accent hover:bg-accent hover:text-white py-3 rounded-xl font-medium transition-colors flex justify-center items-center gap-2">
+            SUSCRIBIRSE
+            <span class="material-symbols-outlined text-sm">mail</span>
+          </button>
+        </div>
+      </div>
+      <p class="mt-10 text-xs text-gray-400 uppercase tracking-widest">Lanzamiento: 11 de Abril 2026 • Feria del Libro de Bogotá</p>
+    </div>
+  </section>
+</Layout>

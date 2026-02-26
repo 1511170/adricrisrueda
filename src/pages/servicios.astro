@@ -1,0 +1,206 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="AdriCris Rueda | Servicios Holísticos">
+  <!-- Hero Section -->
+  <header class="relative min-h-[60vh] flex items-center justify-center pt-24 overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] bg-secondary/10 dark:bg-secondary/5 blur-[120px] rounded-full"></div>
+      <div class="absolute bottom-[10%] right-[10%] w-[40%] h-[40%] bg-accent/10 dark:bg-accent/5 blur-[100px] rounded-full"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
+      <span class="inline-block py-1 px-3 rounded-full bg-white/50 dark:bg-white/5 border border-secondary/30 text-secondary text-xs tracking-[0.3em] font-bold uppercase mb-6 backdrop-blur-sm">Catálogo Exclusivo</span>
+      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-none text-primary dark:text-white mb-6">
+        Servicios <span class="italic text-secondary">Holísticos</span>
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
+        Herramientas sagradas y espacios de contención para acompañar tu proceso de despertar y sanación interior.
+      </p>
+      <div class="mt-10 flex justify-center">
+        <span class="material-symbols-outlined text-4xl text-accent/50 animate-bounce">keyboard_arrow_down</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Terapia Section -->
+  <section class="py-24 bg-surface-light/50 dark:bg-surface-dark relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+        <div class="w-full lg:w-1/2 relative">
+          <div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
+            <img 
+              alt="Manos canalizando energía de luz" 
+              class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 
+              src="/images/adriana-servicios.png" 
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent mix-blend-multiply"></div>
+          </div>
+          <div class="absolute -z-10 -top-10 -left-10 w-32 h-32 bg-secondary/30 rounded-full blur-2xl"></div>
+          <div class="absolute -z-10 -bottom-10 -right-10 w-40 h-40 bg-accent/30 rounded-full blur-2xl"></div>
+        </div>
+        <div class="w-full lg:w-1/2 space-y-8">
+          <div>
+            <span class="text-accent dark:text-secondary font-bold tracking-[0.2em] uppercase text-sm mb-2 block">Sesión 1 a 1</span>
+            <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-primary dark:text-white leading-tight">
+              Terapia de Sanación <br/><span class="italic font-light text-secondary">Intuitiva</span>
+            </h2>
+          </div>
+          <div class="prose prose-lg dark:prose-invert text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+            <p>
+              Un encuentro profundo con tu esencia. En estas sesiones personalizadas, utilizo una combinación única de técnicas ancestrales y modernas para armonizar tu campo energético.
+            </p>
+            <p>
+              Integro la sabiduría del <strong>Reiki</strong> para canalizar energía vital universal, la <strong>Activación Pineal</strong> para expandir tu consciencia superior, y la <strong>Cristaloterapia</strong> para alinear tus centros energéticos (chakras).
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+            <div class="flex items-start gap-3 group">
+              <span class="material-symbols-outlined text-secondary text-2xl group-hover:scale-110 transition-transform">spa</span>
+              <div>
+                <h4 class="font-display font-bold text-primary dark:text-white mb-1">Reiki Usui</h4>
+                <p class="text-sm text-gray-500 dark:text-gray-400 font-light">Equilibrio físico, mental y emocional.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 group">
+              <span class="material-symbols-outlined text-secondary text-2xl group-hover:scale-110 transition-transform">diamond</span>
+              <div>
+                <h4 class="font-display font-bold text-primary dark:text-white mb-1">Cristales</h4>
+                <p class="text-sm text-gray-500 dark:text-gray-400 font-light">Amplificación y limpieza energética.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 group">
+              <span class="material-symbols-outlined text-secondary text-2xl group-hover:scale-110 transition-transform">visibility</span>
+              <div>
+                <h4 class="font-display font-bold text-primary dark:text-white mb-1">Glándula Pineal</h4>
+                <p class="text-sm text-gray-500 dark:text-gray-400 font-light">Conexión con tu intuición superior.</p>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6">
+            <button class="gold-gradient text-primary px-10 py-4 rounded-full font-display font-bold text-lg shadow-xl hover:shadow-2xl hover:shadow-secondary/20 transition-all transform hover:-translate-y-1 w-full sm:w-auto tracking-wide">
+              AGENDAR SESIÓN
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Talleres Section -->
+  <section class="py-24 bg-white dark:bg-background-dark relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-secondary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Educación Consciente</span>
+        <h2 class="font-display text-4xl md:text-5xl text-primary dark:text-white mb-6">Talleres y Cursos</h2>
+        <p class="text-gray-600 dark:text-gray-300 font-light text-lg">
+          Espacios de aprendizaje diseñados para entregarte herramientas prácticas de autosanación y crecimiento espiritual.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Taller 1 -->
+        <div class="group bg-surface-light dark:bg-surface-dark rounded-[2rem] p-8 hover:bg-white dark:hover:bg-gray-800 border border-transparent hover:border-secondary/20 shadow-lg hover:shadow-2xl transition-all duration-500 relative overflow-hidden">
+          <div class="absolute -right-8 -top-8 w-32 h-32 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-colors"></div>
+          <div class="relative z-10 flex flex-col h-full">
+            <div class="w-14 h-14 rounded-2xl bg-white dark:bg-background-dark shadow-sm flex items-center justify-center mb-6 text-secondary group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-3xl">self_improvement</span>
+            </div>
+            <h3 class="font-display text-2xl text-primary dark:text-white mb-3">Método Swami Om Hari</h3>
+            <p class="text-gray-600 dark:text-gray-400 font-light text-sm leading-relaxed mb-6 flex-grow">
+              Aprende mi método exclusivo de auto-sanación emocional canalizado. Una guía paso a paso para transformar tus emociones.
+            </p>
+            <a class="inline-flex items-center text-accent font-semibold text-sm tracking-wide uppercase hover:gap-2 transition-all" href="#">
+              Ver detalles <span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Taller 2 -->
+        <div class="group bg-surface-light dark:bg-surface-dark rounded-[2rem] p-8 hover:bg-white dark:hover:bg-gray-800 border border-transparent hover:border-secondary/20 shadow-lg hover:shadow-2xl transition-all duration-500 relative overflow-hidden">
+          <div class="absolute -right-8 -top-8 w-32 h-32 bg-accent/10 rounded-full blur-2xl group-hover:bg-accent/20 transition-colors"></div>
+          <div class="relative z-10 flex flex-col h-full">
+            <div class="w-14 h-14 rounded-2xl bg-white dark:bg-background-dark shadow-sm flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-3xl">psychology</span>
+            </div>
+            <h3 class="font-display text-2xl text-primary dark:text-white mb-3">Activación Pineal</h3>
+            <p class="text-gray-600 dark:text-gray-400 font-light text-sm leading-relaxed mb-6 flex-grow">
+              Talleres intensivos para activar tu glándula pineal, potenciando tu creatividad, intuición y conexión espiritual.
+            </p>
+            <a class="inline-flex items-center text-accent font-semibold text-sm tracking-wide uppercase hover:gap-2 transition-all" href="#">
+              Ver detalles <span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Taller 3 -->
+        <div class="group bg-surface-light dark:bg-surface-dark rounded-[2rem] p-8 hover:bg-white dark:hover:bg-gray-800 border border-transparent hover:border-secondary/20 shadow-lg hover:shadow-2xl transition-all duration-500 relative overflow-hidden">
+          <div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors"></div>
+          <div class="relative z-10 flex flex-col h-full">
+            <div class="w-14 h-14 rounded-2xl bg-white dark:bg-background-dark shadow-sm flex items-center justify-center mb-6 text-primary dark:text-gray-200 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-3xl">menu_book</span>
+            </div>
+            <h3 class="font-display text-2xl text-primary dark:text-white mb-3">Escritura Terapéutica</h3>
+            <p class="text-gray-600 dark:text-gray-400 font-light text-sm leading-relaxed mb-6 flex-grow">
+              Encuentra tu propia voz a través de la escritura. Ejercicios prácticos para sanar y reescribir tu historia personal.
+            </p>
+            <a class="inline-flex items-center text-accent font-semibold text-sm tracking-wide uppercase hover:gap-2 transition-all" href="#">
+              Ver detalles <span class="material-symbols-outlined text-lg ml-1">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comunidad Section -->
+  <section class="py-24 bg-primary dark:bg-surface-dark relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+        <path d="M0 100 C 30 50 70 80 100 30 L 100 100 Z" fill="#E3B64C" opacity="0.5"></path>
+        <path d="M0 100 C 40 80 60 40 100 60 L 100 100 Z" fill="#4F8F8B" opacity="0.3"></path>
+      </svg>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="bg-surface-light/10 backdrop-blur-md rounded-3xl p-8 md:p-16 border border-white/10">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="w-full md:w-2/3 text-center md:text-left">
+            <span class="inline-block py-1 px-3 rounded-full bg-secondary/20 text-secondary text-xs font-bold uppercase mb-6 border border-secondary/20">Comunidad Exclusiva</span>
+            <h2 class="font-display text-4xl md:text-5xl text-white mb-6">Acompañamiento Grupal</h2>
+            <h3 class="font-display text-2xl text-secondary mb-6 italic">"Confío y Creo en Mí"</h3>
+            <p class="text-gray-200 font-light text-lg mb-8 leading-relaxed max-w-2xl">
+              No estás solo en este camino. Únete a mi comunidad sagrada donde compartimos meditaciones en vivo, círculos de palabra y un soporte continuo para sostener tu vibración alta. Un espacio seguro para ser, sentir y sanar en tribu.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <button class="bg-secondary text-primary hover:bg-white hover:text-primary px-8 py-3 rounded-full font-bold transition-colors shadow-lg shadow-secondary/20">
+                UNIRME A LA COMUNIDAD
+              </button>
+              <button class="px-8 py-3 rounded-full font-bold text-white border border-white/30 hover:bg-white/10 transition-colors">
+                SABER MÁS
+              </button>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 flex justify-center">
+            <div class="relative w-64 h-64 md:w-80 md:h-80">
+              <div class="absolute inset-0 bg-secondary/20 rounded-full blur-3xl animate-pulse"></div>
+              <div class="relative w-full h-full bg-gradient-to-tr from-accent/20 to-secondary/20 rounded-full border border-white/20 flex items-center justify-center backdrop-blur-sm shadow-2xl animate-float">
+                <span class="material-symbols-outlined text-8xl text-white/80">diversity_3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-background-light dark:bg-background-dark text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <span class="material-symbols-outlined text-5xl text-accent mb-6">flight_takeoff</span>
+      <h2 class="font-display text-4xl md:text-5xl text-primary dark:text-white mb-6">Comienza tu proceso de <span class="italic text-secondary">transformación</span></h2>
+      <p class="text-gray-600 dark:text-gray-400 font-light text-lg mb-8">
+        Cada paso cuenta. Si sientes el llamado, es porque tu alma está lista.
+      </p>
+      <div class="w-24 h-1 bg-gradient-to-r from-transparent via-secondary to-transparent mx-auto"></div>
+    </div>
+  </section>
+</Layout>
