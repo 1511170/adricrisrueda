@@ -1,0 +1,56 @@
+name: Deploy to Static Repo
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build Astro site
+        run: npm run build
+        
+      - name: Clone static repo
+        run: |
+          git clone https://github.com/1511170/adricrisrueda-static.git ../adricrisrueda-static
+          
+      - name: Copy build files
+        run: |
+          cp -r dist/* ../adricrisrueda-static/
+          
+      - name: Configure Git
+        run: |
+          cd ../adricrisrueda-static
+          git config user.email "adriana@adricrisrueda.com"
+          git config user.name "Adriana Cris"
+          
+      - name: Commit and Push
+        working-directory: ../adricrisrueda-static
+        run: |
+          git add -A
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Build: Actualización automática desde código Astro"
+            git push
+            echo "✅ Deploy completed!"
+          else
+            echo "ℹ️ No changes to deploy"
+          fi
