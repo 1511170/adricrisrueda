@@ -130,25 +130,30 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
 
   <!-- Catálogo Section -->
   <section class="py-24 bg-background-light dark:bg-background-dark relative" id="catalogo">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-20">
         <span class="text-secondary font-bold tracking-[0.3em] uppercase text-xs block mb-4">Catálogo Completo</span>
         <h2 class="font-display text-4xl md:text-5xl text-primary dark:text-white">Obras Publicadas</h2>
       </div>
-      <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
-        <!-- Libro 1: Lazos Escritos -->
+      
+      <div class="space-y-16">
+        <!-- Obra 1: Lazos Escritos -->
         <div class="bg-white dark:bg-surface-dark rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-100 dark:border-gray-800 flex flex-col lg:flex-row gap-8 items-center group">
           <div class="w-48 flex-shrink-0 perspective-1000 relative">
             <div class="absolute inset-0 bg-secondary/20 blur-2xl rounded-full group-hover:bg-secondary/30 transition-colors"></div>
             <div class="aspect-[2/3] bg-surface-light dark:bg-gray-800 rounded shadow-lg flex items-center justify-center text-center p-4 relative z-10 transform group-hover:rotate-y-6 transition-transform duration-500 border border-gray-200 dark:border-gray-700">
-              <img src="/images/lazos-escritos.png" alt="Portada Lazos Escritos — antología 2023 de Adriana Cristina Rueda Sañudo" class="w-full h-full object-contain" loading="lazy" decoding="async" />
+              <img src="/images/lazos-escritos.png" alt="Portada Lazos Escritos — libro 2023 de Adriana Cristina Rueda Sañudo" class="w-full h-full object-contain" loading="lazy" decoding="async" />
             </div>
           </div>
           <div class="flex-grow text-center lg:text-left">
-            <span class="text-secondary font-bold text-sm mb-2 block">2023 • Antología</span>
+            <div class="flex items-center justify-center lg:justify-start gap-3 mb-2">
+              <span class="text-secondary font-bold text-sm">2023</span>
+              <span class="px-2 py-0.5 bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wider rounded">Libro</span>
+            </div>
             <h3 class="font-display text-3xl text-primary dark:text-white mb-4">Lazos Escritos</h3>
-            <p class="text-gray-600 dark:text-gray-300 font-light mb-6 line-clamp-3">
-              Una colección de relatos que exploran las conexiones humanas invisibles. Como parte del programa "Autor de Éxito", esta obra reúne voces diversas que tejen una red de emociones compartidas y descubrimientos personales.
+            <p class="text-accent font-medium mb-4 text-sm uppercase tracking-wide">Obra autobiográfica + contenido canalizado</p>
+            <p class="text-gray-600 dark:text-gray-300 font-light mb-6">
+              Una primera inmersión en el mundo editorial. Este libro es una guía para quienes atraviesan sus propios procesos de transformación.
             </p>
             <button class="text-primary dark:text-secondary font-bold text-sm tracking-wide border-b-2 border-secondary/50 hover:border-secondary pb-1 transition-all inline-flex items-center gap-1 group-hover:gap-2">
               VER DETALLES
@@ -157,22 +162,53 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
           </div>
         </div>
 
-        <!-- Libro 2: Una Voz al Paso del Eclipse -->
+        <!-- Obra 2: Sus Huesos y Otros Cuentos -->
         <div class="bg-white dark:bg-surface-dark rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-100 dark:border-gray-800 flex flex-col lg:flex-row gap-8 items-center group">
           <div class="w-48 flex-shrink-0 perspective-1000 relative">
             <div class="absolute inset-0 bg-accent/20 blur-2xl rounded-full group-hover:bg-accent/30 transition-colors"></div>
             <div class="aspect-[2/3] bg-surface-light dark:bg-gray-800 rounded shadow-lg flex items-center justify-center text-center p-4 relative z-10 transform group-hover:rotate-y-6 transition-transform duration-500 border border-gray-200 dark:border-gray-700">
-              <img src="/images/portada-libro-2.png" alt="Una Voz al paso del Eclipse — libro de crecimiento espiritual por AdriCris Rueda, 2026" class="w-full h-full object-contain" loading="lazy" decoding="async" />
+              <img src="/images/sus-huesos-antologia.jpg" alt="Portada antología Sus Huesos y Otros Cuentos — programa Autor de Éxito 2025" class="w-full h-full object-contain" loading="lazy" decoding="async" />
             </div>
           </div>
           <div class="flex-grow text-center lg:text-left">
-            <span class="text-accent font-bold text-sm mb-2 block">2024 • Crecimiento Espiritual</span>
-            <h3 class="font-display text-3xl text-primary dark:text-white mb-4 leading-tight">Una Voz al Paso del Eclipse</h3>
-            <p class="text-gray-600 dark:text-gray-300 font-light mb-6 line-clamp-3">
-              Una conmovedora historia de sanación y reencontrarse a uno mismo. A través de la metáfora del eclipse, este libro te invita a abrazar tu oscuridad para descubrir tu luz interior.
+            <div class="flex items-center justify-center lg:justify-start gap-3 mb-2">
+              <span class="text-accent font-bold text-sm">2025</span>
+              <span class="px-2 py-0.5 bg-accent/10 text-accent text-xs font-bold uppercase tracking-wider rounded">Antología</span>
+              <span class="px-2 py-0.5 bg-primary/10 text-primary dark:text-accent text-xs font-bold uppercase tracking-wider rounded">Autor de Éxito</span>
+            </div>
+            <h3 class="font-display text-3xl text-primary dark:text-white mb-2 leading-tight">Sus Huesos y Otros Cuentos</h3>
+            <p class="text-secondary font-medium mb-4 text-lg italic">"Los árboles que se miraron al espejo"</p>
+            <p class="text-gray-600 dark:text-gray-300 font-light mb-4">
+              Una fábula que explora el valor de habitar la identidad en medio de las diferencias.
             </p>
-            <a href="/libro" class="text-primary dark:text-secondary font-bold text-sm tracking-wide border-b-2 border-secondary/50 hover:border-secondary pb-1 transition-all inline-flex items-center gap-1 group-hover:gap-2">
-              VER DETALLES
+            <div class="flex items-center gap-4 justify-center lg:justify-start">
+              <img src="/images/sus-huesos-diploma.jpg" alt="Diploma programa Autor de Éxito" class="w-16 h-12 object-cover rounded border border-gray-200 dark:border-gray-700" loading="lazy" />
+              <span class="text-xs text-gray-500 dark:text-gray-400">Reconocimiento 31 octubre 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Obra 3: Una Voz al Paso del Eclipse -->
+        <div class="bg-white dark:bg-surface-dark rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-100 dark:border-gray-800 flex flex-col lg:flex-row gap-8 items-center group">
+          <div class="w-48 flex-shrink-0 perspective-1000 relative">
+            <div class="absolute inset-0 bg-primary/20 blur-2xl rounded-full group-hover:bg-primary/30 transition-colors"></div>
+            <div class="aspect-[2/3] bg-surface-light dark:bg-gray-800 rounded shadow-lg flex items-center justify-center text-center p-4 relative z-10 transform group-hover:rotate-y-6 transition-transform duration-500 border border-gray-200 dark:border-gray-700">
+              <img src="/images/portada-libro-2.png" alt="Portada Una Voz al paso del Eclipse — libro de crecimiento espiritual por AdriCris Rueda, 2026" class="w-full h-full object-contain" loading="lazy" decoding="async" />
+            </div>
+          </div>
+          <div class="flex-grow text-center lg:text-left">
+            <div class="flex items-center justify-center lg:justify-start gap-3 mb-2">
+              <span class="text-primary dark:text-accent font-bold text-sm">2026</span>
+              <span class="px-2 py-0.5 bg-primary/10 text-primary dark:text-accent text-xs font-bold uppercase tracking-wider rounded">Libro</span>
+              <span class="px-2 py-0.5 bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wider rounded">Próximo Lanzamiento</span>
+            </div>
+            <h3 class="font-display text-3xl text-primary dark:text-white mb-4 leading-tight">Una Voz al Paso del Eclipse</h3>
+            <p class="text-accent font-medium mb-4 text-sm uppercase tracking-wide">Crecimiento Espiritual</p>
+            <p class="text-gray-600 dark:text-gray-300 font-light mb-6">
+              Mi obra más personal. Un recorrido íntimo por situaciones que nos hicieron creer que vivíamos en la oscuridad, cuando en realidad solo necesitábamos reencontrarnos con nuestra propia luz.
+            </p>
+            <a href="/libro" class="gold-gradient text-primary px-6 py-2 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all inline-flex items-center gap-2">
+              PRE-ORDENAR
               <span class="material-symbols-outlined text-base">arrow_forward</span>
             </a>
           </div>
