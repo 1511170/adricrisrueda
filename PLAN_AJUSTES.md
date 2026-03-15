@@ -1,7 +1,7 @@
 # Plan de Ajustes - AdriCris Rueda
 
 > **Fecha**: 2026-03-15  
-> **Estado**: Planificación completa  
+> **Estado**: Fase 1 COMPLETADA | Fases 2-3 PENDIENTES  
 > **Dependencias pendientes**: Fotos reales (Sobre mí, Servicios)
 
 ---
@@ -17,60 +17,70 @@
 
 ---
 
-## 🎯 Fase 1: Ajustes sin dependencias (Pueden hacerse ahora)
+## ✅ Fase 1: COMPLETADA (2026-03-15)
 
-### 1.1 Inicio (`src/pages/index.astro`)
+> **Resumen**: Todos los ajustes de contenido sin dependencias de imágenes han sido implementados exitosamente. Se realizaron 4 commits con cambios en 4 archivos.
 
-- [ ] **Biografía**: Reemplazar texto actual por:
+### Commits realizados en Fase 1:
+| Commit | Descripción |
+|--------|-------------|
+| `7705b59` | Actualizar biografía y descripción de talleres en inicio |
+| `094ff37` | Actualizar página Sobre mí - texto, redes y perfil |
+| `5c14640` | Actualizar página Libro - citas, temáticas y nota de autora |
+| `8a8bf9e` | Actualizar página Servicios - terapias y talleres |
+
+### 1.1 Inicio (`src/pages/index.astro`) ✅
+
+- [x] **Biografía**: Reemplazar texto actual por:
   ```
   Terapeuta holística, coach espiritual y escritora.
   Acompaño procesos de autoconocimiento y crecimiento interior a través de terapias, talleres y cursos.
   Dirijo las mentorías de escritura "Autoras con Propósito" y la comunidad espiritual "Confío y Creo en Mí", espacios dedicados al desarrollo personal y la vida consciente.
   ```
 
-- [ ] **Talleres y cursos**: Reemplazar descripción en tarjeta correspondiente:
+- [x] **Talleres y cursos**: Reemplazar descripción en tarjeta correspondiente:
   ```
   Formación en crecimiento espiritual, canalización, escritura creativa y terapéutica, y herramientas prácticas para la vida consciente.
   ```
 
-**Commit sugerido**: `content: Actualizar biografía y descripción de talleres en inicio`
+**Commit realizado**: `7705b59` - content: Actualizar biografía y descripción de talleres en inicio
 
 ---
 
-### 1.2 Sobre mí (`src/pages/sobre-mi.astro`)
+### 1.2 Sobre mí (`src/pages/sobre-mi.astro`) ✅
 
-- [ ] **Frase flotante**: Cambiar de "Mi voz es el puente." a "Tu voz es el puente"
+- [x] **Frase flotante**: Cambiar de "Mi voz es el puente." a "Tu voz es el puente"
 
-- [ ] **Links a redes sociales**: Actualizar en hero y en sección de contacto:
+- [x] **Links a redes sociales**: Actualizar en hero y en sección de contacto:
   - YouTube: `@adricrisrueda` (cambiar de `@adricrisespiritual`)
   - Facebook: `adricrisrueda` (cambiar de `adricrisespiritual`)
   - Instagram: `adricrisrueda` (ya está correcto)
   - ~~LinkedIn~~: Eliminar
   - ~~TikTok~~: No agregar
 
-- [ ] **Sección "Mi camino"**: Reemplazar texto completo:
+- [x] **Sección "Mi camino"**: Reemplazar texto completo:
   ```
   Durante varios años mi vida estuvo dedicada a la arquitectura, los planos y las estructuras concretas. Como arquitecta y profesional en Tecnologías de Información, me movía en un mundo donde el orden, la lógica y la precisión eran fundamentales. Con el tiempo empecé a sentir un interés cada vez más profundo por el mundo interior y por las preguntas que surgen cuando una persona busca comprenderse a sí misma más allá de lo visible. Ese proceso me llevó a explorar distintos caminos de crecimiento personal y espiritual, y poco a poco fui integrando estas experiencias en mi vida y en mi forma de acompañar a otros. Hoy, como terapeuta holística y coach espiritual, facilito espacios de reflexión y acompañamiento a través de terapias, talleres y procesos de crecimiento personal. En mi trabajo integro prácticas de sanación energética, intuición y escritura como caminos de conexión interior y transformación personal.
   ```
 
-- [ ] **Íconos de perfil**: 
+- [x] **Íconos de perfil**: 
   - Cambiar "Arquitecta" por "Mujer real" (texto del ícono)
   - Cambiar "Guía Espiritual" por "Coach Espiritual"
   - Evaluar cuál queda mejor visualmente
 
-- [ ] **Quitar texto "Arquitecta de sueños"**: Eliminar overlay de la imagen lateral
+- [x] **Quitar texto "Arquitecta de sueños"**: Eliminar overlay de la imagen lateral
 
-- [ ] **Sección "Continuemos la conversación"**:
+- [x] **Sección "Continuemos la conversación":
   - Cambiar "tu propia arquitectura interior" por "tu voz interior"
   - Actualizar links a redes (mismos que en hero)
 
-**Commit sugerido**: `content: Actualizar página Sobre mí - texto, redes y perfil`
+**Commit realizado**: `094ff37` - content: Actualizar página Sobre mí - texto, redes y perfil
 
 ---
 
-### 1.3 Libro (`src/pages/libro.astro`)
+### 1.3 Libro (`src/pages/libro.astro`) ✅
 
-- [ ] **Sección de cita (blockquote)**:
+- [x] **Sección de cita (blockquote)**:
   - Quitar el `format_quote` de abajo (solo mantener el de arriba)
   - Reemplazar frase por:
     ```
@@ -81,14 +91,14 @@
     "Por primera vez entendí que toda mi vida había intentado mirar hacia afuera para encontrar respuestas que solo estaban dentro."
     ```
 
-- [ ] **Temáticas centrales**:
+- [x] **Temáticas centrales**:
   - Cambiar "una misma" por "uno mismo"
   - Reemplacer ítem "Renacimiento" por:
     ```
     Elecciones conscientes: Habitar la certeza de que la vida no es un viaje lineal, sino una serie de decisiones que nos acercan a nuestra identidad y autenticidad.
     ```
 
-- [ ] **Sección "La esencia terapéutica"**: Reemplazar texto completo:
+- [x] **Sección "La esencia terapéutica"**: Reemplazar texto completo:
   ```
   "Escribir Una Voz al Paso del Eclipse no fue solo un ejercicio literario, sino un acto de confrontación. En la historia de Natalia quise plasmar procesos que veo a diario en mi consulta y que también he vivido en mi propia piel.
 
@@ -97,24 +107,24 @@
   Este libro es una invitación a recordarlo. A reconocer que esas sombras no borran nuestra identidad, y que atravesarlas puede convertirse en el momento en que volvemos a escuchar con claridad nuestra propia voz."
   ```
 
-**Commit sugerido**: `content: Actualizar página Libro - citas, temáticas y nota de autora`
+**Commit realizado**: `5c14640` - content: Actualizar página Libro - citas, temáticas y nota de autora
 
 ---
 
-### 1.4 Servicios (`src/pages/servicios.astro`)
+### 1.4 Servicios (`src/pages/servicios.astro`) ✅
 
-- [ ] **Quitar "Activación pineal"** de la descripción de Terapia
+- [x] **Quitar "Activación pineal"** de la descripción de Terapia
 
-- [ ] **Íconos de servicios**:
+- [x] **Íconos de servicios**:
   - Cambiar "Reiki Usui" → "Reiki Intuitivo"
   - Cambiar "Glándula Pineal" → "Conversaciones canalizadas"
 
-- [ ] **Talleres**: Reemplazar tarjeta "Activación Pineal" por:
+- [x] **Talleres**: Reemplazar tarjeta "Activación Pineal" por:
   - **Título**: Respiración consciente
   - **Descripción**: Prácticas diarias para cultivar tranquilidad, enfoque y presencia.
   - **Ícono**: Usar apropiado (ej. `air` o `self_improvement`)
 
-**Commit sugerido**: `content: Actualizar página Servicios - terapias y talleres`
+**Commit realizado**: `8a8bf9e` - content: Actualizar página Servicios - terapias y talleres
 
 ---
 
