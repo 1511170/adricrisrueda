@@ -1,8 +1,9 @@
 # Plan de Ajustes 2 - Reorganización Completa
 
 > **Fecha**: 2026-03-15  
-> **Estado**: Planificación  
-> **Basado en**: Lineamientos de Adriana (audios 5-marzo)
+> **Estado**: ✅ COMPLETADO (Fase A y B)  
+> **Basado en**: Lineamientos de Adriana (audios 5-marzo)  
+> **Commits realizados**: 3
 
 ---
 
@@ -143,21 +144,22 @@ public/images/
 
 ## 📋 Orden de Ejecución
 
-### Paso 1: Imágenes y Biblioteca
-1. ✅ Copiar imágenes (hecho)
-2. Reestructurar `libros.astro`
-3. Commit
+### Paso 1: Imágenes y Biblioteca ✅ COMPLETADO
+1. ✅ Copiar imágenes - Commit `7834535`
+2. ✅ Reestructurar `libros.astro` - Commit `12b10cb`
+3. ✅ Orden cronológico: Lazos → Sus Huesos → Eclipse
+4. ✅ Antología con diploma y badge Autor de Éxito
 
-### Paso 2: Sobre Mí
-1. Quitar sección libros
-2. Crear sección Testimonios/Entrevistas
-3. Agregar embed de Spotify
-4. Commit
+### Paso 2: Sobre Mí ✅ COMPLETADO
+1. ✅ Quitar sección libros - Commit `1737c21`
+2. ✅ Crear sección Testimonios (3 ejemplos)
+3. ✅ Agregar card de Podcast Spotify - Commit `1737c21`
+4. ✅ Diseño con grid y divider visual
 
-### Paso 3: Revisión y ajustes
-1. Revisar consistencia en todo el sitio
-2. Verificar links
-3. Build y test
+### Paso 3: Pendiente
+- [ ] Build y verificación visual
+- [ ] Esperar testimonios reales de Adriana
+- [ ] Revisar si hay fotos reales para agregar
 
 ---
 
