@@ -1,0 +1,33 @@
+{
+  "name": "AdriCris Rueda | Vida Consciente",
+  "short_name": "AdriCris Rueda",
+  "description": "Terapeuta holística, coach espiritual y escritora. Acompaño procesos de autoconocimiento y crecimiento interior.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#EDEBE8",
+  "theme_color": "#0F5257",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "health", "education"],
+  "lang": "es",
+  "dir": "ltr"
+}
