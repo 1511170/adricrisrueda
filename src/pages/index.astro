@@ -29,7 +29,7 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
         <div class="order-2 lg:order-1 text-center lg:text-left space-y-8">
           <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-surface-light border border-secondary/20 shadow-sm">
             <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-            <span class="text-primary dark:text-primary text-xs font-bold tracking-[0.2em] uppercase">Nuevo Lanzamiento</span>
+            <span class="text-primary dark:text-primary text-xs font-bold tracking-[0.2em] uppercase">Disponible</span>
           </div>
           
           <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.1]">
@@ -37,7 +37,7 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
             <span class="text-gray-800 dark:text-gray-200 font-light text-4xl md:text-6xl lg:text-7xl block mt-2">al paso del Eclipse</span>
           </h1>
           
-          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-lg mx-auto lg:mx-0 font-light leading-relaxed tracking-wide">
+          <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-lg mx-auto lg:mx-0 font-light leading-relaxed tracking-wide">
             Una historia que invita a mirarte con honestidad, recordar quién fuiste y dejar la puerta abierta hacia una vida más auténtica.
           </p>
           
@@ -45,7 +45,7 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
             <a href="/libro" class="group relative overflow-hidden bg-accent text-white px-10 py-4 rounded-full font-display transition-all transform hover:-translate-y-1 shadow-lg shadow-accent/30 hover:shadow-accent/50">
               <span class="relative z-10 flex items-center justify-center gap-2">
                 <span class="material-symbols-outlined text-lg">auto_stories</span>
-                PRE-ORDENAR LIBRO
+                COMPRAR LIBRO
               </span>
             </a>
             <a href="#servicios" class="group relative overflow-hidden bg-secondary text-primary px-10 py-4 rounded-full font-display transition-all transform hover:-translate-y-1 shadow-lg shadow-secondary/30 hover:shadow-secondary/50">
@@ -102,7 +102,7 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
     </div>
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center mb-16">
-        <span class="text-secondary font-bold tracking-[0.3em] uppercase text-xs block mb-4">La Guía</span>
+        <span class="text-secondary font-bold tracking-[0.3em] uppercase text-sm md:text-base block mb-4">La Guía</span>
         <h2 class="font-display text-4xl md:text-5xl text-gray-900 dark:text-white mb-2">Adriana Cristina Rueda Sañudo</h2>
         <div class="w-24 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mt-4"></div>
       </div>
@@ -136,101 +136,11 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
               Acompaño procesos de autoconocimiento y crecimiento interior a través de terapias, talleres y cursos.
             </p>
             <p class="leading-relaxed">
-              Dirijo las mentorías de escritura <strong class="text-secondary font-display text-lg">"Autoras con Propósito"</strong> y la comunidad espiritual <em class="text-gray-800 dark:text-gray-200">"Confío y Creo en Mí"</em>, espacios dedicados al desarrollo personal y la vida consciente.
+              Dirijo las mentorías de escritura <strong class="text-secondary font-display text-lg">"Autoras con Propósito"</strong> y la comunidad espiritual <strong class="text-secondary font-display text-lg">"Confío y Creo en Mí"</strong>, espacios dedicados al desarrollo personal y la vida consciente.
             </p>
             <div class="mt-8 flex justify-end">
               <span class="font-display italic text-accent">Bogotá, Colombia</span>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Book Section -->
-  <section id="libro" class="py-32 bg-surface-light dark:bg-surface-dark transition-colors duration-300 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="flex flex-col lg:flex-row items-center gap-20">
-        <!-- Book Image -->
-        <div class="w-full lg:w-1/2 flex justify-center">
-          <div class="relative group cursor-pointer perspective-1000" style="perspective: 1000px;">
-            <div class="absolute inset-0 bg-secondary/20 blur-xl rounded-full opacity-40"></div>
-            <!-- Libro -->
-            <div class="relative transform transition-transform duration-500 group-hover:rotate-y-6 group-hover:scale-105 z-10">
-              <div class="flex items-stretch">
-                <!-- Lomo del libro -->
-                <div class="w-2 bg-gradient-to-r from-gray-700 via-gray-500 to-gray-700 shadow-md"></div>
-                <!-- Portada -->
-                <div class="relative shadow-[0_15px_40px_rgba(0,0,0,0.25)]">
-                  <img
-                    src="/images/lazos-escritos.png"
-                    alt="Portada de Lazos Escritos — primera antología de Adriana Cristina Rueda Sañudo, 2023"
-                    class="w-[320px] md:w-[420px] h-auto object-contain rounded-sm"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Book Content -->
-        <div class="w-full lg:w-1/2 space-y-10">
-          <div>
-            <span class="text-secondary text-sm font-bold tracking-[0.2em] uppercase mb-2 block">Obra Destacada</span>
-            <h2 class="font-display text-5xl md:text-6xl text-gray-900 dark:text-white leading-tight">
-              Lazos <span class="text-secondary italic font-normal relative">Escritos
-                <svg class="absolute w-full h-3 -bottom-1 left-0 text-secondary/30" preserveAspectRatio="none" viewBox="0 0 100 10">
-                  <path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" stroke-width="2"></path>
-                </svg>
-              </span>
-            </h2>
-          </div>
-          
-          <div class="prose dark:prose-invert text-gray-600 dark:text-gray-300 font-light">
-            <p class="text-lg leading-relaxed">
-              <span class="text-4xl float-left mr-2 font-display text-primary dark:text-accent leading-none">S</span>
-              u primera obra, Lazos Escritos (2023), presenta un transitar donde la conexión espiritual se convierte en una fuente de claridad y serenidad para vivir con mayor conciencia del presente.
-            </p>
-            <p class="text-lg leading-relaxed">
-              Con este libro, su mensaje ha llegado a lectores en diversos países, invitándolos a descubrir su propia voz interior y camino de sanación.
-            </p>
-          </div>
-          
-          <div class="space-y-6 bg-white/50 dark:bg-background-dark/50 p-8 rounded-2xl border border-white/60 dark:border-white/5 backdrop-blur-sm">
-            <div class="flex items-center gap-4 group">
-              <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-xl">auto_awesome</span>
-              </div>
-              <p class="text-gray-700 dark:text-gray-200 text-sm md:text-base">Relatos de conexión espiritual y transformación personal.</p>
-            </div>
-            <div class="flex items-center gap-4 group">
-              <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-primary transition-colors">
-                <span class="material-symbols-outlined text-xl">favorite</span>
-              </div>
-              <p class="text-gray-700 dark:text-gray-200 text-sm md:text-base">Guía hacia la serenidad y el consciente del presente.</p>
-            </div>
-            <div class="flex items-center gap-4 group">
-              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary dark:text-accent group-hover:bg-primary group-hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-xl">all_inclusive</span>
-              </div>
-              <p class="text-gray-700 dark:text-gray-200 text-sm md:text-base">Inspiración para lectores de múltiples países.</p>
-            </div>
-          </div>
-          
-          <div class="flex flex-col sm:flex-row gap-4 items-center">
-            <a href="https://www.amazon.com/dp/B0CK3ZWGJN?ref_=cm_sw_r_mwn_dp_19HB31JS3SM9DHB2G39X" target="_blank" rel="noopener noreferrer" class="gold-gradient text-primary px-8 py-4 rounded-full font-display font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-3 tracking-wide">
-              COMPRAR EN AMAZON
-              <span class="material-symbols-outlined text-xl">shopping_bag</span>
-            </a>
-            <a href="https://wa.me/573132979675?text=Hola%2C%20me%20interesa%20comprar%20el%20libro%20Lazos%20Escritos" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-display font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-3 tracking-wide">
-              COMPRAR POR WHATSAPP
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-            </a>
           </div>
         </div>
       </div>
@@ -319,26 +229,57 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
       <path d="M0 50 Q 25 30 50 50 T 100 50 V 100 H 0 Z" fill="white"></path>
     </svg>
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <span class="material-symbols-outlined text-6xl text-secondary mb-6 block mx-auto animate-bounce">mark_email_unread</span>
+      <span class="material-symbols-outlined text-7xl md:text-8xl text-secondary mb-6 block mx-auto animate-bounce">mark_email_unread</span>
       <h2 class="font-display text-4xl md:text-5xl text-white mb-6 leading-tight">Comienza tu viaje hacia una<br/> <span class="text-secondary italic">Vida Consciente</span></h2>
       <p class="text-gray-200 font-light text-lg mb-10 max-w-2xl mx-auto">
         Suscríbete para recibir meditaciones gratuitas, novedades sobre talleres y capítulos exclusivos de mi nuevo libro.
       </p>
-      <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto relative" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
+      <!-- Gift Banner -->
+      <div class="bg-secondary/20 backdrop-blur-sm border border-secondary/30 rounded-2xl p-6 mb-8 max-w-lg mx-auto">
+        <div class="flex items-center justify-center gap-3 mb-2">
+          <span class="material-symbols-outlined text-3xl text-secondary">redeem</span>
+          <span class="text-secondary font-bold">REGALO EXCLUSIVO</span>
+        </div>
+        <p class="text-white font-display text-xl mb-1">Descarga Gratis: 30 Tips de Vida</p>
+        <p class="text-gray-300 text-sm">Al suscribirte recibirás instantáneamente este PDF con consejos prácticos para vivir con mayor consciencia.</p>
+      </div>
+      
+      <form action="https://formsubmit.co/adriana@adricrisrueda.com" method="POST" class="flex flex-col gap-4 justify-center max-w-lg mx-auto relative">
+        <!-- Configuración Formsubmit -->
+        <input type="hidden" name="_next" value="https://adricrisrueda.com/gracias">
+        <input type="hidden" name="_subject" value="Nueva suscripción a Vida Consciente">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        
+        <input 
+          type="text" 
+          name="nombre"
+          placeholder="Tu nombre" 
+          class="w-full px-8 py-4 rounded-full text-gray-900 bg-surface-light focus:ring-2 focus:ring-secondary focus:outline-none border-none shadow-xl font-light placeholder-gray-400"
+          required
+        />
         <input 
           type="email" 
+          name="email"
           placeholder="Tu correo electrónico" 
           class="w-full px-8 py-4 rounded-full text-gray-900 bg-surface-light focus:ring-2 focus:ring-secondary focus:outline-none border-none shadow-xl font-light placeholder-gray-400"
           required
         />
+        <label class="flex items-start gap-3 text-left cursor-pointer">
+          <input type="checkbox" required class="mt-1 w-5 h-5 rounded border-gray-300 text-secondary focus:ring-secondary flex-shrink-0">
+          <span class="text-sm text-white/80">
+            Acepto el tratamiento de mis datos personales según la <a href="/privacidad" class="underline hover:text-secondary transition-colors">Política de Privacidad</a>
+          </span>
+        </label>
         <button 
           type="submit"
-          class="bg-secondary text-primary font-bold px-10 py-4 rounded-full hover:bg-white hover:text-primary transition-colors shadow-lg shadow-secondary/30 whitespace-nowrap tracking-wide"
+          class="bg-secondary text-primary font-bold px-10 py-4 rounded-full hover:bg-white hover:text-primary transition-colors shadow-lg shadow-secondary/30 whitespace-nowrap tracking-wide mt-2 inline-flex items-center justify-center gap-2"
         >
-          SUSCRIBIRME
+          <span class="material-symbols-outlined">mail</span>
+          SUSCRIBIRME Y RECIBIR MI PDF
         </button>
       </form>
-      <p class="text-xs text-white/40 mt-6 font-light">Respetamos tu privacidad. No spam.</p>
+      <p class="text-xs text-white/40 mt-6 font-light">Unimos fuerzas con tu privacidad. Sin spam, solo esencia.</p>
     </div>
   </section>
 </Layout>

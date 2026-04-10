@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SchemaOrg from '../components/seo/SchemaOrg.astro';
+import Newsletter from '../components/Newsletter.astro';
 ---
 
 <Layout
@@ -63,9 +64,9 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-accent/20 to-secondary/20 blur-3xl rounded-full"></div>
             <div class="relative w-full h-full organic-border-2 overflow-hidden shadow-2xl border-4 border-white/40 dark:border-white/10 ring-1 ring-secondary/30">
               <img
-                alt="Adriana Cristina Rueda Sañudo — Terapeuta Holística, Autora y Guía Espiritual, Bogotá Colombia"
+                alt="Adriana Cristina Rueda Sañudo — Terapeuta Holística y Autora, Bogotá Colombia"
                 class="w-full h-full object-cover"
-                src="/images/adriana-bio.png"
+                src="/images/adriana-bio-blusa-blanca.webp"
                 loading="eager"
                 fetchpriority="high"
                 decoding="sync"
@@ -254,7 +255,7 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
       </div>
 
       <!-- Podcast Spotify -->
-      <div class="max-w-3xl mx-auto bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-800">
+      <div class="max-w-3xl mx-auto bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 mb-8">
         <div class="flex flex-col md:flex-row items-center gap-6">
           <div class="w-20 h-20 rounded-full bg-[#1DB954] flex items-center justify-center flex-shrink-0">
             <svg class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -262,14 +263,40 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
             </svg>
           </div>
           <div class="flex-grow text-center md:text-left">
-            <span class="text-xs text-gray-400 uppercase tracking-wider">Podcast</span>
-            <h4 class="font-display text-xl text-primary dark:text-white mb-2">Entrevista en Spotify</h4>
+            <span class="text-xs text-gray-400 uppercase tracking-wider">Podcast "Viviendo en plenitud"</span>
+            <h4 class="font-display text-xl text-primary dark:text-white mb-2">La física cuántica: ¿qué es y cómo puede ayudarnos a sanar?</h4>
             <p class="text-gray-500 font-light text-sm mb-4">
-              Una conversación sobre escritura terapéutica, sanación y el poder de contar nuestra historia.
+              Descubre cómo transformar una experiencia cercana a la muerte en propósito de vida. Una charla sobre sanación cuántica y crecimiento personal para alcanzar el autoconocimiento, la plenitud y la certeza.
             </p>
-            <a href="https://open.spotify.com/episode/70yA6Lh3IXwmAq138Tp9ga?si=kTbAZpTPTRqN0YSXNaq9Og" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#1DB954] hover:text-[#1ed760] font-medium transition-colors">
-              <span class="material-symbols-outlined text-base">play_circle</span>
-              Escuchar en Spotify
+            <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+              <a href="https://open.spotify.com/episode/70yA6Lh3IXwmAq138Tp9ga?si=kTbAZpTPTRqN0YSXNaq9Og" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#1DB954] hover:text-[#1ed760] font-medium transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+                Escuchar en Spotify
+              </a>
+              <a href="https://youtu.be/_31gXvzdGZk" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#FF0000] hover:text-[#ff3333] font-medium transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+                Ver en YouTube
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entrevista YouTube -->
+      <div class="max-w-3xl mx-auto bg-white dark:bg-surface-dark rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-800">
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <div class="w-20 h-20 rounded-full bg-[#FF0000] flex items-center justify-center flex-shrink-0">
+            <svg class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M21.58 7.16c-.23-.86-.9-1.53-1.76-1.76C18.2 5 12 5 12 5s-6.2 0-7.82.4c-.86.23-1.53.9-1.76 1.76C2 8.8 2 12 2 12s0 3.2.42 4.84c.23.86.9 1.53 1.76 1.76C5.8 19 12 19 12 19s6.2 0 7.82-.4c.86-.23 1.53-.9 1.76-1.76C22 15.2 22 12 22 12s0-3.2-.42-4.84zM10 15V9l5.2 3-5.2 3z"/></svg>
+          </div>
+          <div class="flex-grow text-center md:text-left">
+            <span class="text-xs text-gray-400 uppercase tracking-wider">YouTube</span>
+            <h4 class="font-display text-xl text-primary dark:text-white mb-2">Atravesar la incertidumbre sin huir de ti</h4>
+            <p class="text-gray-500 font-light text-sm mb-4">
+              Una conversación sobre cómo enfrentar los momentos de incertidumbre desde la consciencia y el autoconocimiento.
+            </p>
+            <a href="https://youtu.be/YP15Bo31ZjA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#FF0000] hover:text-[#ff3333] font-medium transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+              Ver en YouTube
             </a>
           </div>
         </div>
@@ -317,4 +344,7 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
       </div>
     </div>
   </section>
+  
+  <!-- Newsletter Section -->
+  <Newsletter />
 </Layout>

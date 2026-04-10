@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SchemaOrg from '../components/seo/SchemaOrg.astro';
+---
+
+<Layout
+  title="Política de Privacidad | AdriCris Rueda"
+  description="Política de tratamiento de datos personales de Adriana Cristina Rueda Sañudo. Vida Consciente - Bogotá, Colombia."
+  keywords={['privacidad', 'datos personales', 'protección de datos', 'AdriCris Rueda']}
+>
+  <SchemaOrg slot="head" type={['AboutPage']} />
+  <SchemaOrg
+    slot="head"
+    type={['BreadcrumbList']}
+    breadcrumbs={[
+      { name: 'Inicio', url: '/' },
+      { name: 'Política de Privacidad', url: '/privacidad' },
+    ]}
+  />
+  
+  <!-- Hero Section -->
+  <header class="relative py-24 bg-primary dark:bg-background-dark overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+        <path d="M0 100 C 30 50 70 80 100 30 L 100 100 Z" fill="#E3B64C"></path>
+      </svg>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="material-symbols-outlined text-6xl text-secondary mb-6 block">shield</span>
+      <h1 class="font-display text-4xl md:text-5xl text-white mb-4">Política de Privacidad</h1>
+      <p class="text-gray-300 font-light">Protección de datos personales</p>
+    </div>
+  </header>
+
+  <!-- Content Section -->
+  <section class="py-16 bg-white dark:bg-surface-dark">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose dark:prose-invert max-w-none">
+        
+        <div class="bg-accent/10 dark:bg-accent/5 p-6 rounded-2xl mb-8">
+          <p class="text-gray-700 dark:text-gray-300 m-0">
+            <strong>Última actualización:</strong> 9 de abril de 2026
+          </p>
+        </div>
+
+        <h2 class="font-display text-2xl text-primary dark:text-white mt-8 mb-4">1. Responsable del Tratamiento</h2>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          El responsable del tratamiento de sus datos personales es <strong>Adriana Cristina Rueda Sañudo</strong>, 
+          identificada con cédula de ciudadanía, con domicilio en Bogotá, Colombia, y correo electrónico 
+          <a href="mailto:adriana@adricrisrueda.com" class="text-accent hover:underline">adriana@adricrisrueda.com</a>.
+        </p>
+
+        <h2 class="font-display text-2xl text-primary dark:text-white mt-8 mb-4">2. Datos Personales Recopilados</h2>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          En el sitio web <strong>adricrisrueda.com</strong> podemos recopilar los siguientes datos personales:
+        </p>
+        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+          <li>Nombre completo</li>
+          <li>Correo electrónico</li>
+          <li>Número de teléfono (cuando contactas por WhatsApp)</li>
+          <li>Información de navegación (cookies)</li>
+        </ul>
+
+        <h2 class="font-display text-2xl text-primary dark:text-white mt-8 mb-4">3. Finalidad del Tratamiento</h2>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          Los datos personales recolectados serán utilizados para las siguientes finalidades:
+        </p>
+        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+          <li>Enviar newsletters, meditaciones y contenido exclusivo</li>
+          <li>Responder solicitudes de información sobre servicios</li>
+          <li>Procesar compras de libros y agendamiento de citas</li>
+          <li>Informar sobre eventos, talleres y lanzamientos</li>
+          <li>Mejorar la experiencia de usuario en el sitio web</li>
+        </ul>
+
+        <h2 class="font-display text-2xl text-primary dark:text-white mt-8 mb-4">4. Base Legal</h2>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          El tratamiento de sus datos personales se realiza con base en su <strong>consentimiento libre, previo, expreso e informado</strong>, 
+          el cual se solicita al momento de registrarse en el formulario de newsletter o al contactar por cualquier medio.
+        </p>
+
+        <h2 class="font-display text-2xl text-primary dark:text-white mt-8 mb-4">5. Derechos de los Titulares</h2>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          Como titular de datos personales, usted tiene derecho a:
+        </p>
+        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+          <li>Conocer, actualizar y rectificar sus datos personales</li>
+          <li>Solicitar prueba de la autorización otorgada</li>
+          <li>Ser informado sobre el uso de sus datos</li>
+          <li>Solicitar la supresión de sus datos cuando no sean necesarios</li>
+          <li>Revocar la autorización y/o solicitar la eliminación de datos</li>
+          <li>Acceder a sus datos personales de forma gratuita</li>
+        </ul>
+
+        <h2 class="font-display text-2xl text-primary dark:text-white mt-8 mb-4">6. Procedimiento para Ejercer Derechos</h2>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          Para ejercer sus derechos, puede enviar una solicitud al correo electrónico 
+          <a href="mailto:adriana@adricrisrueda.com" class="text-accent hover:underline">adriana@adricrisrueda.com</a> 
+          indicando:
+        </p>
+        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2 ml-4">
+          <li>Nombre completo</li>
+          <li>Datos de contacto</li>
+          <li>Descripción clara de la solicitud</li>
+          <li>Documento que acredite identidad (si es necesario)</li>
+        </ul>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mt-4">
+          Su solicitud será atendida en un máximo de <strong>15 días hábiles</strong>.
+        </p>
+
+        <h2 class="font-display text-2xl text-primary dark:text-white mt-8 mb-4">7. Cookies y Tecnologías de Seguimiento</h2>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          Este sitio web utiliza cookies para mejorar la experiencia de navegación. Las cookies son pequeños archivos 
+          de texto que se almacenan en su dispositivo. Puede configurar su navegador para rechazar cookies, 
+          aunque esto puede afectar algunas funcionalidades del sitio.
+        </p>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          Utilizamos Google Analytics para analizar el tráfico del sitio. Esta herramienta utiliza cookies 
+          para recopilar información anónima sobre su navegación.
+        </p>
+
+        <h2 class="font-display text-2xl text-primary dark:text-white mt-8 mb-4">8. Seguridad de la Información</h2>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          Implementamos medidas de seguridad técnicas, administrativas y físicas para proteger sus datos personales 
+          contra daño, pérdida, alteración, destrucción o uso no autorizado. Sin embargo, ninguna transmisión de 
+          datos por internet es completamente segura, por lo que no podemos garantizar la seguridad absoluta.
+        </p>
+
+        <h2 class="font-display text-2xl text-primary dark:text-white mt-8 mb-4">9. Transferencia de Datos</h2>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          Sus datos personales no serán transferidos, compartidos ni vendidos a terceros sin su consentimiento previo, 
+          excepto cuando sea requerido por autoridad competente o por obligación legal.
+        </p>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          Utilizamos servicios de terceros (como Google Workspace y proveedores de hosting) que pueden tener acceso 
+          limitado a sus datos únicamente para operar el sitio web y prestar los servicios solicitados.
+        </p>
+
+        <h2 class="font-display text-2xl text-primary dark:text-white mt-8 mb-4">10. Vigencia</h2>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          La presente política de privacidad entra en vigor desde el momento de su publicación en el sitio web. 
+          Nos reservamos el derecho de actualizarla en cualquier momento. Los cambios serán publicados en esta página 
+          con la fecha de actualización correspondiente.
+        </p>
+
+        <h2 class="font-display text-2xl text-primary dark:text-white mt-8 mb-4">11. Contacto</h2>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          Si tiene preguntas sobre esta política de privacidad o desea ejercer sus derechos, puede contactarme en:
+        </p>
+        <div class="bg-surface-light dark:bg-background-dark p-6 rounded-2xl mt-4">
+          <p class="text-gray-700 dark:text-gray-300 m-0">
+            <strong>Adriana Cristina Rueda Sañudo</strong><br>
+            Email: <a href="mailto:adriana@adricrisrueda.com" class="text-accent hover:underline">adriana@adricrisrueda.com</a><br>
+            WhatsApp: <a href="https://wa.me/573132979675" class="text-accent hover:underline">+57 313 297 9675</a><br>
+            Ubicación: Bogotá, Colombia
+          </p>
+        </div>
+
+        <div class="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8">
+          <p class="text-sm text-gray-500 dark:text-gray-400 text-center">
+            © 2026 Adriana Cristina Rueda Sañudo | Vida Consciente.<br>
+            Todos los derechos reservados.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>

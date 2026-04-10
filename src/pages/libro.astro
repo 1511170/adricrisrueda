@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SchemaOrg from '../components/seo/SchemaOrg.astro';
+import Newsletter from '../components/Newsletter.astro';
 ---
 
 <Layout
@@ -56,7 +57,7 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
         <div class="order-2 text-center lg:text-left space-y-8">
           <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-secondary/20 dark:bg-secondary/30 border border-secondary/30 shadow-sm mx-auto lg:mx-0">
             <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-            <span class="text-primary dark:text-secondary text-xs font-bold tracking-[0.2em] uppercase">Lanzamiento: 11 de Abril 2026</span>
+            <span class="text-primary dark:text-secondary text-xs font-bold tracking-[0.2em] uppercase">Lanzamiento: Feria del Libro de Bogotá 2026</span>
           </div>
           <h1 class="font-display text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-primary dark:text-white">
             Una Voz <br/>
@@ -102,28 +103,32 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
       <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
         <div class="lg:w-1/2 space-y-8">
           <span class="text-secondary font-bold tracking-[0.3em] uppercase text-xs block mb-2">Sinopsis</span>
-          <h2 class="font-display text-4xl md:text-5xl text-primary dark:text-white leading-tight">El Reencuentro de <span class="italic text-accent">Natalia</span></h2>
+          <h2 class="font-display text-4xl md:text-5xl text-primary dark:text-white leading-tight">Una Voz al Paso <span class="italic text-accent">del Eclipse</span></h2>
           <div class="prose dark:prose-invert text-gray-600 dark:text-gray-300 font-light text-lg leading-relaxed space-y-6">
             <p>
-              <span class="text-5xl float-left mr-3 mt-[-10px] font-display text-secondary">N</span>atalia camina por la vida con una sensación constante de estar incompleta, como si una parte esencial de su ser se hubiera quedado atrapada en algún lugar del pasado. "Una Voz al Paso del Eclipse" no es solo una historia; es un espejo.
+              <span class="text-5xl float-left mr-3 mt-[-10px] font-display text-secondary">N</span>atalia, una mujer de cincuenta años que hace tiempo dejó atrás la profesión que la desgastaba, vive sola, en una calma que a veces confunde con plenitud. Durante años ha aprendido a acomodarse a lo que otros esperan de ella, apagando, casi sin notarlo, la parte más luminosa y soñadora de sí misma.
             </p>
             <p>
-              A través de sus páginas, acompañamos a la protagonista en un viaje íntimo y revelador. Enfrentada a sus miedos más profundos y a las sombras que ha evitado durante años, Natalia descubre que el eclipse no es el fin de la luz, sino el preludio necesario para un nuevo amanecer.
+              Sin embargo, cuando las situaciones adversas de la vida empiezan a confrontarla, comprende que lleva tiempo sosteniendo una paz construida a costa de sí misma.
             </p>
             <p>
-              Es una narrativa tejida con vulnerabilidad y fuerza, que nos recuerda que a veces debemos perdernos para poder encontrarnos verdaderamente.
+              Movida por una incomodidad que ya no puede ignorar, inicia un reencuentro íntimo con la vitalidad que un día tuvo y que abandonó para sobrevivir. En ese proceso, descubre que su mayor obstáculo no es el mundo exterior, sino las lealtades invisibles que la atan a una versión de sí misma que ya no la representa.
+            </p>
+            <p class="text-accent font-medium italic">
+              Una voz al paso del eclipse es una historia que invita a detenerse, mirarse con honestidad y dejar la puerta abierta hacia una vida más auténtica.
             </p>
           </div>
         </div>
-        <div class="lg:w-1/2 flex flex-col justify-center">
+        <div class="lg:w-1/2 flex flex-col justify-center space-y-8">
+          <!-- Frase destacada de la autora -->
           <div class="relative p-10 md:p-14 bg-background-light dark:bg-background-dark rounded-tr-[4rem] rounded-bl-[4rem] shadow-xl border border-secondary/10">
             <span class="material-symbols-outlined absolute top-8 left-8 text-6xl text-secondary/20" aria-hidden="true">format_quote</span>
             <blockquote class="relative z-10 text-center">
               <p class="font-display text-2xl md:text-3xl italic text-primary dark:text-white leading-relaxed mb-6">
-                "Por primera vez entendí que toda mi vida había intentado mirar hacia afuera para encontrar respuestas que solo estaban dentro."
+                "Mirándome a través de los ojos de Natalia, comprendí que, al recuperar mi verdadera voz, volví a sonreír con la mirada"
               </p>
+              <footer class="text-secondary font-display text-lg">— AdriCris Rueda</footer>
             </blockquote>
-            <div class="absolute bottom-4 right-4 w-20 h-20 bg-gradient-to-tr from-accent/20 to-transparent rounded-full blur-xl"></div>
           </div>
         </div>
       </div>
@@ -179,9 +184,9 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
         <div class="grid grid-cols-1 lg:grid-cols-12">
           <div class="lg:col-span-5 relative min-h-[400px] lg:min-h-full">
             <img
-              alt="Adriana Cristina Rueda Sañudo, autora de Una Voz al paso del Eclipse — Terapeuta Holística y Guía Espiritual"
+              alt="Adriana Cristina Rueda Sañudo — Notas de la autora de Una Voz al paso del Eclipse"
               class="absolute inset-0 w-full h-full object-cover"
-              src="/images/adriana-bio.png"
+              src="/images/adriana-notas-autora.webp"
               loading="lazy"
               decoding="async"
             />
@@ -214,35 +219,107 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
     </div>
   </section>
 
-  <!-- Comprar Section -->
+  <!-- Feria del Libro Section -->
   <section class="py-24 bg-surface-light dark:bg-surface-dark relative" id="comprar">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <span class="material-symbols-outlined text-5xl text-accent mb-6 animate-pulse">event_available</span>
-      <h2 class="font-display text-4xl md:text-5xl text-primary dark:text-white mb-6">Feria del Libro de Bogotá 2026</h2>
-      <p class="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto font-light">
-        ¡Sé de los primeros en adquirir "Una Voz al paso del Eclipse"! Regístrate para recibir información exclusiva sobre la preventa y la Firma de Libros en la Feria.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-        <div class="bg-white dark:bg-background-dark p-8 rounded-2xl shadow-lg border border-transparent hover:border-secondary/30 transition-all group">
-          <span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-secondary mb-4 transition-colors">how_to_reg</span>
-          <h3 class="font-display text-xl text-primary dark:text-white mb-2">Pre-Registrarse</h3>
-          <p class="text-sm text-gray-500 mb-6">Reserva tu ejemplar antes del lanzamiento</p>
-          <button class="w-full gold-gradient hover:opacity-90 text-primary py-3 rounded-xl font-medium transition-colors shadow-md hover:shadow-lg flex justify-center items-center gap-2">
-            REGISTRARSE
-            <span class="material-symbols-outlined text-sm">arrow_forward</span>
-          </button>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-12">
+        <span class="material-symbols-outlined text-5xl text-accent mb-6 animate-pulse">menu_book</span>
+        <h2 class="font-display text-4xl md:text-5xl text-primary dark:text-white mb-6">Feria del Libro de Bogotá 2026</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto font-light">
+          Te espero en la Feria Internacional del Libro de Bogotá para compartir juntas este momento especial.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <!-- Imagen oficial FilBo -->
+        <div class="relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img src="/images/filbo-2026-oficial.webp" 
+                 alt="Afiche oficial Feria del Libro de Bogotá 2026 - Adriana Cristina Rueda"
+                 class="w-full h-auto"
+                 loading="lazy" decoding="async" />
+          </div>
         </div>
-        <div class="bg-white dark:bg-background-dark p-8 rounded-2xl shadow-lg border border-transparent hover:border-accent/30 transition-all group">
-          <span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-accent mb-4 transition-colors">notifications_active</span>
-          <h3 class="font-display text-xl text-primary dark:text-white mb-2">Notificaciones</h3>
-          <p class="text-sm text-gray-500 mb-6">Recibe alertas sobre el lanzamiento</p>
-          <button class="w-full border-2 border-accent text-accent hover:bg-accent hover:text-white py-3 rounded-xl font-medium transition-colors flex justify-center items-center gap-2">
-            SUSCRIBIRSE
-            <span class="material-symbols-outlined text-sm">mail</span>
-          </button>
+        
+        <!-- Calendario -->
+        <div class="space-y-6">
+          <h3 class="font-display text-2xl text-primary dark:text-white mb-4">Calendario de Presentaciones</h3>
+          
+          <div class="space-y-4">
+            <div class="bg-white dark:bg-background-dark p-6 rounded-2xl shadow-lg border-l-4 border-secondary">
+              <div class="flex items-start gap-4">
+                <div class="bg-secondary/20 p-3 rounded-xl">
+                  <span class="material-symbols-outlined text-secondary">event</span>
+                </div>
+                <div>
+                  <p class="font-bold text-primary dark:text-white">Miércoles 22 de abril</p>
+                  <p class="text-gray-600 dark:text-gray-300 text-sm">Conversatorio y firma de libros</p>
+                  <p class="text-accent text-sm font-medium">Gran Salón A</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white dark:bg-background-dark p-6 rounded-2xl shadow-lg border-l-4 border-accent">
+              <div class="flex items-start gap-4">
+                <div class="bg-accent/20 p-3 rounded-xl">
+                  <span class="material-symbols-outlined text-accent">event</span>
+                </div>
+                <div>
+                  <p class="font-bold text-primary dark:text-white">Jueves 23, sábado 25 de abril y viernes 1° de mayo</p>
+                  <p class="text-gray-600 dark:text-gray-300 text-sm">Presentaciones y firma de libros</p>
+                  <p class="text-accent text-sm font-medium">Stand Editorial Utrilla (Área Internacional - Pabellón 17 - Stand 1919)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Lanzamiento Amazon -->
+          <div class="bg-primary/5 dark:bg-primary/10 p-6 rounded-2xl border border-primary/20 mb-6">
+            <p class="text-sm text-primary dark:text-accent font-medium mb-2">Lanzamiento Amazon (Internacional)</p>
+            <p class="text-gray-600 dark:text-gray-300">Mayo de 2026</p>
+          </div>
+          
+          <!-- Agendar eventos -->
+          <div class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800">
+            <p class="text-sm font-medium text-primary dark:text-white mb-4 flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary">calendar_add</span>
+              Agregar al calendario
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Presentación+Una+Voz+al+paso+del+Eclipse+-+AdriCris+Rueda&dates=20260422/20260423&details=Conversatorio+y+firma+de+libros+con+Adriana+Cristina+Rueda+en+la+Feria+del+Libro+de+Bogotá+2026.&location=Gran+Salón+A,+Corferias,+Bogotá&sf=true&output=xml" 
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path fill="#4285F4" d="M22 12h-2v-2h-2v2h-2v2h2v2h2v-2h2z"/><path fill="#EA4335" d="M8 12H6v-2H4v2H2v2h2v2h2v-2h2z"/><path fill="#FBBC04" d="M14 6h-2V4h-2v2H8v2h2v2h2V8h2z"/><path fill="#34A853" d="M20 6h-2V4h-2v2h-2v2h2v2h2V8h2z"/></svg>
+                Google Calendar
+              </a>
+              <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Presentación Una Voz al paso del Eclipse - AdriCris Rueda%0ADESCRIPTION:Conversatorio y firma de libros con Adriana Cristina Rueda en la Feria del Libro de Bogotá 2026.%0ALOCATION:Gran Salón A, Corferias, Bogotá%0ADTSTART;VALUE=DATE:20260422%0ADTEND;VALUE=DATE:20260423%0AEND:VEVENT%0AEND:VCALENDAR" 
+                 download="evento-adricris-rueda.ics"
+                 class="inline-flex items-center justify-center gap-2 bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+                Apple Calendar
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <p class="mt-10 text-xs text-gray-400 uppercase tracking-widest">Lanzamiento: 11 de Abril 2026 • Feria del Libro de Bogotá</p>
+      
+      <!-- CTA Compra anticipada -->
+      <div class="bg-white dark:bg-background-dark rounded-3xl p-8 md:p-12 shadow-xl border border-secondary/20 text-center">
+        <span class="material-symbols-outlined text-5xl text-secondary mb-4">local_shipping</span>
+        <h3 class="font-display text-3xl text-primary dark:text-white mb-4">Compra Anticipada</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-xl mx-auto">
+          ¡Ya tengo stock disponible! Realiza tu compra desde ya y te envío tu ejemplar personalizado. Envíos a todo Colombia.
+        </p>
+        <a href="https://wa.me/573132979675?text=Hola%20Adri!%20me%20gustaría%20comprar%20tu%20libro%20:)%20" 
+           target="_blank" rel="noopener noreferrer"
+           class="gold-gradient hover:opacity-90 text-primary px-10 py-4 rounded-full font-display font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 inline-flex items-center gap-3">
+          <span class="material-symbols-outlined">chat</span>
+          COMPRAR POR WHATSAPP
+        </a>
+      </div>
     </div>
   </section>
+  
+  <!-- Newsletter Section -->
+  <Newsletter />
 </Layout>

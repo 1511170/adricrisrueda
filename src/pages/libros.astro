@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SchemaOrg from '../components/seo/SchemaOrg.astro';
+import Newsletter from '../components/Newsletter.astro';
 ---
 
 <Layout
@@ -54,62 +55,6 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
     </div>
   </header>
 
-  <!-- Featured Book Section -->
-  <section class="py-24 bg-accent/10 dark:bg-accent/5 relative overflow-hidden" id="featured">
-    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/40 to-transparent dark:from-black/20 pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-        <div class="w-full lg:w-1/2 flex justify-center lg:justify-end perspective-1000">
-          <div class="relative group w-72 md:w-96">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-secondary/20 dark:bg-secondary/10 blur-3xl rounded-full"></div>
-            <a href="/libro" class="relative transform transition-all duration-700 hover:scale-105 hover:-rotate-2 block">
-              <img
-                alt="Portada de Una Voz al paso del Eclipse — guía de crecimiento espiritual por Adriana Cristina Rueda Sañudo, lanzamiento Feria del Libro de Bogotá 2026"
-                class="w-full rounded-r-2xl rounded-l-md shadow-xl border-l-4 border-white/20"
-                src="/images/portada-libro-2.png"
-                loading="eager"
-                fetchpriority="high"
-                decoding="sync"
-              />
-              <div class="absolute -top-6 -right-6 bg-primary text-white w-24 h-24 rounded-full flex flex-col items-center justify-center shadow-lg border-4 border-white dark:border-surface-dark animate-float" style="animation-delay: 1s;">
-                <span class="text-xs font-bold uppercase tracking-wide">Nuevo</span>
-                <span class="font-display font-bold text-lg">2026</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="w-full lg:w-1/2 text-center lg:text-left space-y-8">
-          <div>
-            <span class="inline-block py-1 px-3 rounded-full bg-accent/20 text-accent dark:text-accent font-bold text-xs uppercase tracking-widest mb-4">Lanzamiento Destacado</span>
-            <h2 class="font-display text-5xl md:text-6xl text-primary dark:text-white leading-tight mb-2">
-              Una Voz al Paso<br/>
-              <span class="italic text-secondary">del Eclipse</span>
-            </h2>
-            <p class="text-gray-500 font-medium uppercase tracking-widest text-sm">Guía de Crecimiento Espiritual</p>
-          </div>
-          <div class="space-y-6 text-gray-700 dark:text-gray-300 font-light text-lg leading-relaxed">
-            <p>
-              En la oscuridad del eclipse es donde la luz verdadera aprende a brillar. Esta obra no es solo un libro, es un compañero para esos momentos de transformación profunda donde las sombras parecen ganar terreno.
-            </p>
-            <p>
-              A través de canalizaciones, ejercicios prácticos y poesía del alma, te invito a recorrer el camino de la incertidumbre para encontrar, del otro lado, una voz más auténtica, fuerte y tuya que nunca.
-            </p>
-          </div>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-            <a href="/libro" class="gold-gradient hover:opacity-90 text-primary px-8 py-4 rounded-full font-display font-bold shadow-xl shadow-secondary/20 hover:shadow-secondary/40 transition-all transform hover:-translate-y-1 tracking-wide flex items-center justify-center gap-2">
-              COMPRAR AHORA
-              <span class="material-symbols-outlined text-sm">shopping_bag</span>
-            </a>
-            <a href="/libro" class="bg-transparent border border-primary dark:border-gray-400 text-primary dark:text-gray-200 px-8 py-4 rounded-full font-display font-medium hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all flex items-center justify-center gap-2">
-              LEER PREVIEW
-              <span class="material-symbols-outlined text-sm">menu_book</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Quote Section -->
   <section class="py-32 bg-primary relative overflow-hidden flex items-center justify-center">
     <div class="absolute inset-0 opacity-10">
@@ -138,10 +83,11 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
       
       <div class="space-y-16">
         <!-- Obra 1: Lazos Escritos -->
-        <div class="bg-white dark:bg-surface-dark rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-100 dark:border-gray-800 flex flex-col lg:flex-row gap-8 items-center group">
-          <div class="w-48 flex-shrink-0 perspective-1000 relative">
+        <div class="bg-white dark:bg-surface-dark rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-100 dark:border-gray-800 flex flex-col lg:flex-row gap-12 items-center group">
+          <!-- Imagen más pequeña -->
+          <div class="w-40 md:w-48 flex-shrink-0 perspective-1000 relative">
             <div class="absolute inset-0 bg-secondary/20 blur-2xl rounded-full group-hover:bg-secondary/30 transition-colors"></div>
-            <div class="aspect-[2/3] bg-surface-light dark:bg-gray-800 rounded shadow-lg flex items-center justify-center text-center p-4 relative z-10 transform group-hover:rotate-y-6 transition-transform duration-500 border border-gray-200 dark:border-gray-700">
+            <div class="aspect-[2/3] bg-surface-light dark:bg-gray-800 rounded shadow-lg flex items-center justify-center text-center p-2 relative z-10 transform group-hover:rotate-y-6 transition-transform duration-500 border border-gray-200 dark:border-gray-700 overflow-hidden">
               <img src="/images/lazos-escritos.png" alt="Portada Lazos Escritos — libro 2023 de Adriana Cristina Rueda Sañudo" class="w-full h-full object-contain" loading="lazy" decoding="async" />
             </div>
           </div>
@@ -151,14 +97,46 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
               <span class="px-2 py-0.5 bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wider rounded">Libro</span>
             </div>
             <h3 class="font-display text-3xl text-primary dark:text-white mb-4">Lazos Escritos</h3>
-            <p class="text-accent font-medium mb-4 text-sm uppercase tracking-wide">Obra autobiográfica + contenido canalizado</p>
-            <p class="text-gray-600 dark:text-gray-300 font-light mb-6">
-              Una primera inmersión en el mundo editorial. Este libro es una guía para quienes atraviesan sus propios procesos de transformación.
-            </p>
-            <button class="text-primary dark:text-secondary font-bold text-sm tracking-wide border-b-2 border-secondary/50 hover:border-secondary pb-1 transition-all inline-flex items-center gap-1 group-hover:gap-2">
-              VER DETALLES
-              <span class="material-symbols-outlined text-base">arrow_forward</span>
-            </button>
+            
+            <!-- Texto completo nuevo -->
+            <div class="prose dark:prose-invert text-gray-600 dark:text-gray-300 font-light mb-6 text-left">
+              <p class="mb-4">
+                Mi primera obra, <em>Lazos Escritos (2023)</em>, presenta una guía de cinco pasos, basada en mi proceso de despertar de consciencia, partiendo desde la "noche oscura del alma", hasta lograr convertir esos momentos de vulnerabilidad en la base del propósito de vida.
+              </p>
+              <p class="mb-4">
+                La conexión espiritual se convierte en una fuente de claridad y serenidad, que invita a vivir con mayor presencia. Además, contiene cuarenta mensajes canalizados, de Jesús, María y los Ángeles.
+              </p>
+              <p>
+                Con este libro, mi mensaje ha llegado a lectores en diversos países, invitándolos a descubrir su propia voz interior y camino de sanación.
+              </p>
+            </div>
+            
+            <!-- Features -->
+            <div class="space-y-2 mb-6">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-secondary text-lg">auto_awesome</span>
+                <span class="text-sm text-gray-600 dark:text-gray-300">40 mensajes canalizados</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-secondary text-lg">menu_book</span>
+                <span class="text-sm text-gray-600 dark:text-gray-300">Guía de 5 pasos de transformación</span>
+              </div>
+            </div>
+            
+            <!-- Botones -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="https://www.amazon.com/dp/B0CK3ZWGJN" target="_blank" rel="noopener noreferrer" 
+                 class="gold-gradient text-primary px-6 py-3 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all inline-flex items-center justify-center gap-2">
+                COMPRAR EN AMAZON
+                <span class="material-symbols-outlined text-base">shopping_bag</span>
+              </a>
+              <a href="https://wa.me/573132979675?text=Hola%2C%20me%20interesa%20comprar%20el%20libro%20Lazos%20Escritos" 
+                 target="_blank" rel="noopener noreferrer"
+                 class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-bold text-sm transition-all inline-flex items-center justify-center gap-2">
+                COMPRAR POR WHATSAPP
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -182,8 +160,23 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
               Una fábula que explora el valor de habitar la identidad en medio de las diferencias.
             </p>
             <div class="flex items-center gap-4 justify-center lg:justify-start">
-              <img src="/images/sus-huesos-diploma.jpg" alt="Diploma programa Autor de Éxito" class="w-16 h-12 object-cover rounded border border-gray-200 dark:border-gray-700" loading="lazy" />
-              <span class="text-xs text-gray-500 dark:text-gray-400">Reconocimiento 31 octubre 2025</span>
+              <div class="relative group/diploma cursor-pointer" onclick="document.getElementById('diploma-modal').classList.remove('hidden')">
+                <img src="/images/sus-huesos-diploma.jpg" alt="Diploma programa Autor de Éxito" class="w-28 h-20 object-cover rounded border border-gray-200 dark:border-gray-700 group-hover/diploma:shadow-lg transition-all" loading="lazy" />
+                <div class="absolute inset-0 bg-black/0 group-hover/diploma:bg-black/10 transition-colors rounded flex items-center justify-center">
+                  <span class="material-symbols-outlined text-white opacity-0 group-hover/diploma:opacity-100 transition-opacity text-2xl">zoom_in</span>
+                </div>
+              </div>
+              <span class="text-xs text-gray-500 dark:text-gray-400">Reconocimiento 31 octubre 2025<br><span class="text-accent">Click para ampliar</span></span>
+            </div>
+            
+            <!-- Modal Diploma -->
+            <div id="diploma-modal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onclick="this.classList.add('hidden')">
+              <div class="relative max-w-4xl w-full">
+                <button class="absolute -top-12 right-0 text-white hover:text-secondary transition-colors" onclick="document.getElementById('diploma-modal').classList.add('hidden')">
+                  <span class="material-symbols-outlined text-4xl">close</span>
+                </button>
+                <img src="/images/sus-huesos-diploma.jpg" alt="Diploma programa Autor de Éxito - Vista completa" class="w-full h-auto rounded-lg shadow-2xl" />
+              </div>
             </div>
           </div>
         </div>
@@ -207,10 +200,16 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
             <p class="text-gray-600 dark:text-gray-300 font-light mb-6">
               Mi obra más personal. Un recorrido íntimo por situaciones que nos hicieron creer que vivíamos en la oscuridad, cuando en realidad solo necesitábamos reencontrarnos con nuestra propia luz.
             </p>
-            <a href="/libro" class="gold-gradient text-primary px-6 py-2 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all inline-flex items-center gap-2">
-              PRE-ORDENAR
-              <span class="material-symbols-outlined text-base">arrow_forward</span>
-            </a>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a href="https://wa.me/573132979675?text=Hola%20Adri!%20me%20gustaría%20pre-ordenar%20tu%20libro%20Una%20Voz%20al%20paso%20del%20Eclipse%20:)%20" target="_blank" rel="noopener noreferrer" class="gold-gradient text-primary px-6 py-2 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all inline-flex items-center justify-center gap-2">
+                PRE-ORDENAR
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
+              <a href="/libro" class="bg-transparent border border-primary dark:border-gray-400 text-primary dark:text-gray-200 px-6 py-2 rounded-full font-bold text-sm hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all inline-flex items-center justify-center gap-2">
+                VER LIBRO
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -218,34 +217,5 @@ import SchemaOrg from '../components/seo/SchemaOrg.astro';
   </section>
 
   <!-- Newsletter Section -->
-  <section class="py-24 bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <span class="material-symbols-outlined text-primary dark:text-accent text-5xl mb-6 block mx-auto animate-pulse">mark_email_unread</span>
-      <h2 class="font-display text-3xl md:text-4xl text-gray-900 dark:text-white mb-4">
-        No te pierdas el próximo capítulo
-      </h2>
-      <p class="text-gray-600 dark:text-gray-300 font-light text-lg mb-10 max-w-lg mx-auto">
-        Suscríbete para recibir noticias de nuevos lanzamientos, lecturas exclusivas y eventos literarios.
-      </p>
-      <form class="max-w-md mx-auto relative flex items-center">
-        <div class="relative w-full">
-          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <span class="material-symbols-outlined text-gray-400">mail</span>
-          </div>
-          <input 
-            class="block w-full pl-10 pr-32 py-4 border-gray-300 dark:border-gray-600 rounded-full leading-5 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary sm:text-sm shadow-sm" 
-            placeholder="tu@correo.com" 
-            type="email"
-          />
-          <button 
-            class="absolute inset-y-1 right-1 px-6 py-2 border border-transparent text-sm leading-5 font-bold rounded-full text-white bg-primary hover:bg-primary/90 focus:outline-none focus:bg-secondary transition duration-150 ease-in-out font-display tracking-wide" 
-            type="submit"
-          >
-            SUSCRIBIRSE
-          </button>
-        </div>
-      </form>
-      <p class="text-xs text-gray-400 mt-4">Respetamos tu privacidad. Cero spam, solo esencia.</p>
-    </div>
-  </section>
+  <Newsletter />
 </Layout>
