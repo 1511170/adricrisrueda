@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="¡Gracias! Disfruta tu lectura | AdriCris Rueda"
+  description="Gracias por tu interés en Una Voz al paso del Eclipse. Descarga aquí el primer capítulo gratis."
+  noindex={true}
+>
+  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-primary/95 to-accent/80 relative overflow-hidden pt-24">
+    <!-- Decoraciones de fondo -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <!-- Icono de éxito -->
+      <div class="mb-8">
+        <div class="w-24 h-24 bg-secondary rounded-full flex items-center justify-center mx-auto animate-bounce">
+          <span class="material-symbols-outlined text-5xl text-primary">auto_stories</span>
+        </div>
+      </div>
+
+      <h1 class="font-display text-4xl md:text-5xl text-white mb-6">
+        ¡Un paso más cerca<br/><span class="text-secondary italic">de tu eclipse!</span>
+      </h1>
+
+      <p class="text-xl text-gray-200 font-light mb-8 leading-relaxed">
+        Gracias por tu interés. El primer capítulo de <em>Una Voz al paso del Eclipse</em> te está esperando.
+      </p>
+
+      <!-- Card de descarga -->
+      <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 mb-8">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <span class="material-symbols-outlined text-4xl text-secondary">download</span>
+          <span class="text-secondary font-bold text-lg">TU DESCARGA ESTÁ LISTA</span>
+        </div>
+
+        <h2 class="font-display text-2xl text-white mb-4">Primer Capítulo — Gratis</h2>
+        <p class="text-gray-300 mb-6">
+          Descubre el inicio del viaje de Natalia. Una historia que invita a mirarse con honestidad.
+        </p>
+
+        <a
+          href="/downloads/primer-capitulo.pdf"
+          download
+          class="inline-flex items-center gap-3 bg-secondary text-primary font-bold px-8 py-4 rounded-full hover:bg-white transition-all transform hover:scale-105 shadow-lg shadow-secondary/30"
+        >
+          <span class="material-symbols-outlined text-xl">download</span>
+          DESCARGAR PRIMER CAPÍTULO
+        </a>
+      </div>
+
+      <!-- CTA compra -->
+      <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 mb-8">
+        <p class="text-gray-300 mb-4">
+          ¿Quieres saber cómo continúa la historia de Natalia?
+        </p>
+        <a
+          href="https://wa.me/573132979675?text=Hola%20Adri!%20me%20gustaría%20comprar%20tu%20libro%20Una%20Voz%20al%20paso%20del%20Eclipse%20:)%20"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-secondary hover:text-white transition-colors font-medium"
+        >
+          <span class="material-symbols-outlined">shopping_bag</span>
+          Compra el libro completo por WhatsApp
+        </a>
+      </div>
+
+      <!-- Botones adicionales -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/libro" class="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors">
+          <span class="material-symbols-outlined">arrow_back</span>
+          Volver al libro
+        </a>
+        <span class="hidden sm:inline text-white/40">|</span>
+        <a href="/" class="inline-flex items-center gap-2 text-white/80 hover:text-secondary transition-colors">
+          <span class="material-symbols-outlined">home</span>
+          Ir al inicio
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

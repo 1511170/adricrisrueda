@@ -1,0 +1,172 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SchemaOrg from '../../components/seo/SchemaOrg.astro';
+---
+
+<Layout
+  title="Material Exclusivo | Una Voz al paso del Eclipse — AdriCris Rueda"
+  description="Descubre el material exclusivo de Una Voz al paso del Eclipse: la carta regalo de Natalia y la playlist oficial en Spotify."
+  image="/images/portada-libro-2.png"
+  keywords={['Una Voz al paso del Eclipse', 'material exclusivo', 'carta Natalia', 'playlist Spotify', 'AdriCris Rueda']}
+>
+  <SchemaOrg
+    slot="head"
+    type={['Book']}
+    data={{
+      name: 'Una Voz al paso del Eclipse',
+      genre: 'Crecimiento Espiritual',
+      description: 'Material exclusivo del libro: carta regalo de Natalia y playlist oficial en Spotify.',
+      url: 'https://adricrisrueda.com/una-voz-al-paso-del-eclipse/material-exclusivo',
+    }}
+  />
+  <SchemaOrg
+    slot="head"
+    type={['BreadcrumbList']}
+    breadcrumbs={[
+      { name: 'Inicio', url: '/' },
+      { name: 'Biblioteca', url: '/libros' },
+      { name: 'Una Voz al paso del Eclipse', url: '/libro' },
+      { name: 'Material Exclusivo', url: '/una-voz-al-paso-del-eclipse/material-exclusivo' },
+    ]}
+  />
+
+  <!-- Hero Section -->
+  <header class="relative min-h-[70vh] flex items-center justify-center pt-24 overflow-hidden bg-background-light dark:bg-background-dark">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-[-10%] right-[-10%] w-[50%] h-[60%] bg-secondary/10 dark:bg-secondary/5 blur-[100px] rounded-full"></div>
+      <div class="absolute bottom-[-10%] left-[-10%] w-[45%] h-[55%] bg-accent/10 dark:bg-accent/5 blur-[100px] rounded-full"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
+      <span class="text-secondary tracking-[0.3em] uppercase text-xs font-semibold block mb-6">Material Exclusivo</span>
+      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-tight text-primary dark:text-white mb-8">
+        Nos vemos al<br/>
+        <span class="italic text-accent font-light">otro lado del eclipse</span>
+      </h1>
+      <div class="w-24 h-1 bg-secondary mx-auto rounded-full mb-10"></div>
+      <div class="max-w-2xl mx-auto space-y-6 text-gray-600 dark:text-gray-300 font-light text-lg leading-relaxed">
+        <p>
+          De una u otra forma, ya eres parte de mi vida. A través de estas páginas abrí mi corazón y compartí contigo lo que he podido observar durante estos cincuenta años —sí, los mismos de Natalia— en las historias de personas que conozco y en las de quienes no, pero que, como tú y como yo, viven, ríen y lloran.
+        </p>
+        <p>
+          Sin embargo, algunas historias no terminan cuando se cierra un libro. Hay momentos que quedaron fuera de estas páginas. Instantes que también merecen ser contados.
+        </p>
+        <p class="text-primary dark:text-accent font-medium italic">
+          Así como en el cumpleaños de Natalia hubo regalos para ella, también quiso dejarte uno a ti.
+        </p>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <a class="animate-bounce p-2 text-primary dark:text-accent/70 hover:text-secondary transition-colors" href="#material">
+        <span class="material-symbols-outlined text-4xl">keyboard_arrow_down</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Material Exclusivo Section -->
+  <section class="py-24 bg-white dark:bg-surface-dark relative" id="material">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-secondary font-bold tracking-[0.3em] uppercase text-xs block mb-4">Para ti, lector</span>
+        <h2 class="font-display text-4xl md:text-5xl text-primary dark:text-white mb-4">Descúbrelo</h2>
+        <p class="text-gray-500 font-light max-w-xl mx-auto">
+          Estos son los regalos que Natalia quiso dejarte. Momentos que merecen ser vividos más allá de las páginas.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Carta de Natalia -->
+        <div class="group bg-background-light dark:bg-background-dark rounded-[2rem] p-10 hover:shadow-2xl transition-all duration-500 relative overflow-hidden border border-gray-100 dark:border-gray-800 flex flex-col">
+          <div class="absolute -right-10 -top-10 w-40 h-40 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-colors"></div>
+          <div class="relative z-10 flex flex-col h-full">
+            <div class="w-16 h-16 rounded-2xl bg-white dark:bg-surface-dark shadow-sm flex items-center justify-center mb-8 text-secondary group-hover:scale-110 transition-transform duration-300">
+              <span class="material-symbols-outlined text-3xl">mail</span>
+            </div>
+            <h3 class="font-display text-2xl text-primary dark:text-white mb-3">Carta regalo de Natalia</h3>
+            <p class="text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-8 flex-grow">
+              Una carta escrita desde el corazón de Natalia para ti. Palabras que no encontraron espacio en el libro pero que guardan la esencia de su viaje.
+            </p>
+            <a
+              href="/downloads/carta-regalo-natalia.pdf"
+              download
+              class="gold-gradient hover:opacity-90 text-primary px-8 py-4 rounded-full font-display font-bold tracking-wide transition-all shadow-lg shadow-secondary/30 hover:shadow-secondary/50 transform hover:-translate-y-1 inline-flex items-center justify-center gap-2 w-full"
+            >
+              <span class="material-symbols-outlined">download</span>
+              DESCARGAR CARTA
+            </a>
+          </div>
+        </div>
+
+        <!-- Playlist Spotify -->
+        <div class="group bg-background-light dark:bg-background-dark rounded-[2rem] p-10 hover:shadow-2xl transition-all duration-500 relative overflow-hidden border border-gray-100 dark:border-gray-800 flex flex-col">
+          <div class="absolute -right-10 -top-10 w-40 h-40 bg-[#1DB954]/10 rounded-full blur-2xl group-hover:bg-[#1DB954]/20 transition-colors"></div>
+          <div class="relative z-10 flex flex-col h-full">
+            <div class="w-16 h-16 rounded-2xl bg-white dark:bg-surface-dark shadow-sm flex items-center justify-center mb-8 text-[#1DB954] group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+              </svg>
+            </div>
+            <h3 class="font-display text-2xl text-primary dark:text-white mb-3">Playlist Oficial</h3>
+            <p class="text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-8 flex-grow italic">
+              "Algunas fotografías guardan historias en silencio.<br/>Algunas canciones también.<br/>Escucha aquí la playlist oficial de Una voz al paso del eclipse."
+            </p>
+            <a
+              href="https://open.spotify.com/playlist/69hw6Gi3b8Pu4B6ye5w9QE?si=bgJqVaT3Qymo2ed3R8P3FQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-[#1DB954] hover:bg-[#1ed760] text-white px-8 py-4 rounded-full font-display font-bold tracking-wide transition-all shadow-lg shadow-[#1DB954]/30 hover:shadow-[#1DB954]/50 transform hover:-translate-y-1 inline-flex items-center justify-center gap-2 w-full"
+            >
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+              </svg>
+              ESCUCHAR EN SPOTIFY
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-primary dark:bg-background-dark relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+        <path d="M0 100 C 30 50 70 80 100 30 L 100 100 Z" fill="#E3B64C"></path>
+      </svg>
+    </div>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="material-symbols-outlined text-5xl text-secondary mb-6 block">auto_stories</span>
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-6">¿Aún no has leído el libro?</h2>
+      <p class="text-gray-200 font-light text-lg mb-10">
+        Descubre la historia completa de Natalia y su viaje hacia el reencuentro consigo misma.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/libro" class="gold-gradient hover:opacity-90 text-primary px-10 py-4 rounded-full font-display font-bold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 inline-flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined">menu_book</span>
+          CONOCER EL LIBRO
+        </a>
+        <a href="https://wa.me/573132979675?text=Hola%20Adri!%20me%20gustaría%20comprar%20tu%20libro%20:)%20" target="_blank" rel="noopener noreferrer" class="border border-white/30 text-white hover:bg-white hover:text-primary px-10 py-4 rounded-full font-display font-bold transition-all inline-flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined">chat</span>
+          COMPRAR POR WHATSAPP
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer mini -->
+  <section class="py-12 bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gray-500 dark:text-gray-400 font-light text-sm mb-4">
+        Si quieres conocer un poco más sobre mí, puedes visitar <a href="/" class="text-accent hover:underline">adricrisrueda.com</a>
+      </p>
+      <p class="text-gray-500 dark:text-gray-400 font-light text-sm mb-4">
+        También me encuentras en <strong>Instagram</strong> y <strong>YouTube</strong> como <span class="text-secondary font-medium">@adricrisrueda</span>
+      </p>
+      <p class="text-gray-400 dark:text-gray-500 font-light text-xs">
+        Si deseas compartir una imagen del libro o un fragmento que te haya acompañado, puedes hacerlo con: <span class="text-secondary font-medium">#UnaVozAlPasoDelEclipse</span>
+      </p>
+      <div class="mt-6">
+        <a href="mailto:adriana@adricrisrueda.com" class="text-accent hover:underline text-sm">adriana@adricrisrueda.com</a>
+      </div>
+    </div>
+  </section>
+</Layout>
