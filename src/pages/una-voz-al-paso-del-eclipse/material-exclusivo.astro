@@ -126,28 +126,82 @@ import SchemaOrg from '../../components/seo/SchemaOrg.astro';
     </div>
   </section>
 
-  <!-- CTA Section -->
+  <!-- Conexión Section -->
   <section class="py-24 bg-primary dark:bg-background-dark relative overflow-hidden">
     <div class="absolute inset-0 opacity-10">
       <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
         <path d="M0 100 C 30 50 70 80 100 30 L 100 100 Z" fill="#E3B64C"></path>
       </svg>
     </div>
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <span class="material-symbols-outlined text-5xl text-secondary mb-6 block">auto_stories</span>
-      <h2 class="font-display text-3xl md:text-4xl text-white mb-6">¿Aún no has leído el libro?</h2>
-      <p class="text-gray-200 font-light text-lg mb-10">
-        Descubre la historia completa de Natalia y su viaje hacia el reencuentro consigo misma.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/libro" class="gold-gradient hover:opacity-90 text-primary px-10 py-4 rounded-full font-display font-bold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 inline-flex items-center justify-center gap-2">
-          <span class="material-symbols-outlined">menu_book</span>
-          CONOCER EL LIBRO
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16">
+        <span class="material-symbols-outlined text-5xl text-secondary mb-6 block">favorite</span>
+        <h2 class="font-display text-3xl md:text-4xl text-white mb-6">Gracias por acompañar a Natalia hasta el final</h2>
+        <p class="text-gray-200 font-light text-lg max-w-2xl mx-auto">
+          Esta historia es solo una puerta. Si lo que leíste resuena en ti, hay muchos más caminos por recorrer juntos.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <!-- Servicios -->
+        <a href="/servicios" class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-5 group-hover:bg-secondary/30 transition-colors">
+            <span class="material-symbols-outlined text-3xl text-secondary">spa</span>
+          </div>
+          <h3 class="font-display text-xl text-white mb-3">Terapias & Talleres</h3>
+          <p class="text-gray-300 font-light text-sm leading-relaxed">
+            Sesiones individuales y experiencias grupales para seguir tu propio camino de sanación.
+          </p>
         </a>
-        <a href="https://wa.me/573132979675?text=Hola%20Adri!%20me%20gustaría%20comprar%20tu%20libro%20:)%20" target="_blank" rel="noopener noreferrer" class="border border-white/30 text-white hover:bg-white hover:text-primary px-10 py-4 rounded-full font-display font-bold transition-all inline-flex items-center justify-center gap-2">
-          <span class="material-symbols-outlined">chat</span>
-          COMPRAR POR WHATSAPP
+
+        <!-- Más libros -->
+        <a href="/libros" class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-5 group-hover:bg-secondary/30 transition-colors">
+            <span class="material-symbols-outlined text-3xl text-secondary">auto_stories</span>
+          </div>
+          <h3 class="font-display text-xl text-white mb-3">Más historias</h3>
+          <p class="text-gray-300 font-light text-sm leading-relaxed">
+            Descubre el resto de la biblioteca de AdriCris. Cada libro es un viaje diferente hacia ti mismo.
+          </p>
         </a>
+
+        <!-- Conectar -->
+        <a href="https://wa.me/573132979675?text=Hola%20Adri!%20Terminé%20de%20leer%20Una%20Voz%20al%20paso%20del%20Eclipse%20y%20me%20gustaría%20conectar%20contigo%20:)%20" target="_blank" rel="noopener noreferrer" class="group bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-5 group-hover:bg-secondary/30 transition-colors">
+            <span class="material-symbols-outlined text-3xl text-secondary">chat</span>
+          </div>
+          <h3 class="font-display text-xl text-white mb-3">Escríbele a Adri</h3>
+          <p class="text-gray-300 font-light text-sm leading-relaxed">
+            ¿Te gustaría compartir lo que sentiste al leer? Adriana lee y responde cada mensaje personalmente.
+          </p>
+        </a>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="text-center border-t border-white/10 pt-12">
+        <p class="text-gray-300 font-light mb-6">Sigue el día a día de AdriCris en sus redes</p>
+        <div class="flex justify-center gap-4">
+          <a href="https://www.facebook.com/adricrisrueda/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/10 hover:bg-secondary/20 border border-white/10 flex items-center justify-center text-white hover:text-secondary transition-all" aria-label="Facebook">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/adricrisrueda/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/10 hover:bg-secondary/20 border border-white/10 flex items-center justify-center text-white hover:text-secondary transition-all" aria-label="Instagram">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.53c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@adricrisrueda" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/10 hover:bg-secondary/20 border border-white/10 flex items-center justify-center text-white hover:text-secondary transition-all" aria-label="YouTube">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="https://co.linkedin.com/in/adriana-cristina-rueda" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white/10 hover:bg-secondary/20 border border-white/10 flex items-center justify-center text-white hover:text-secondary transition-all" aria-label="LinkedIn">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
